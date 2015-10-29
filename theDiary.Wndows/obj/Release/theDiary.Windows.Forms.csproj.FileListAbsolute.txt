@@ -1,0 +1,2 @@
+C:\Development\DotNot\Projects\Personal\Framework\theDiary.Wndows\obj\Release\theDiary.Windows.Forms.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Personal\Framework\theDiary.Wndows\obj\Release\Seth.Windows.Forms.dll

@@ -1,0 +1,9 @@
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\bin\Release\RunAs.exe
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\bin\Release\RunAs.pdb
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\obj\Release\Iterative.Tools.RunAs.AddApplication.resources
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\obj\Release\Iterative.Tools.RunAs.Form1.resources
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\obj\Release\Iterative.Tools.RunAs.Properties.Resources.resources
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\obj\Release\Nedbank RunAs.csproj.GenerateResource.Cache
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\obj\Release\RunAs.exe
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\obj\Release\RunAs.pdb
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\obj\Release\Nedbank RunAs.csprojResolveAssemblyReference.cache

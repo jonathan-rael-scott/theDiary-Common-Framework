@@ -1,0 +1,19 @@
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\bin\Release\Host File Manager.exe.config
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\obj\Release\Host File Manager.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\obj\Release\Seth.Tools.Development.HostFileManager.Controls.HostEntryControl.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\obj\Release\Seth.Tools.Development.HostFileManager.Controls.IPAddressControl.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\obj\Release\Seth.Tools.Development.HostFileManager.Controls.SearchControl.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\obj\Release\Seth.Tools.Development.HostFileManager.DialogForm.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\obj\Release\Seth.Tools.Development.HostFileManager.MainForm.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\obj\Release\Seth.Tools.Development.HostFileManager.Properties.Resources.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\obj\Release\Host File Manager.csproj.GenerateResource.Cache
+C:\Development\DotNot\Projects\Personal\Framework\Host File Manager\bin\Release\Host File Manager.exe.config
+C:\Development\DotNot\Projects\Personal\Framework\Host File Manager\obj\Release\Host File Manager.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Personal\Framework\Host File Manager\obj\Release\Seth.Tools.Development.HostFileManager.Controls.HostEntryControl.resources
+C:\Development\DotNot\Projects\Personal\Framework\Host File Manager\obj\Release\Seth.Tools.Development.HostFileManager.Controls.IPAddressControl.resources
+C:\Development\DotNot\Projects\Personal\Framework\Host File Manager\obj\Release\Seth.Tools.Development.HostFileManager.Controls.SearchControl.resources
+C:\Development\DotNot\Projects\Personal\Framework\Host File Manager\obj\Release\Seth.Tools.Development.HostFileManager.DialogForm.resources
+C:\Development\DotNot\Projects\Personal\Framework\Host File Manager\obj\Release\Seth.Tools.Development.HostFileManager.MainForm.resources
+C:\Development\DotNot\Projects\Personal\Framework\Host File Manager\obj\Release\Seth.Tools.Development.HostFileManager.Properties.Resources.resources
+C:\Development\DotNot\Projects\Personal\Framework\Host File Manager\obj\Release\Host File Manager.csproj.GenerateResource.Cache
+C:\Development\DotNot\Projects\theDiary Software\Framework\Host File Manager\bin\Release\Host File Manager.exe.config

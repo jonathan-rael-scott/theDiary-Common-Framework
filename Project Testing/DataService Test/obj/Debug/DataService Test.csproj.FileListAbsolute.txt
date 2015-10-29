@@ -1,0 +1,54 @@
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\Database1.sdf
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\DataService Test.exe.config
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\DataService Test.exe
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\DataService Test.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\EntityFramework.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\Microsoft.Data.Edm.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\Microsoft.Data.OData.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\Microsoft.Data.Services.Client.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\System.Spatial.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\EntityFramework.xml
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\Microsoft.Data.Edm.xml
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\Microsoft.Data.OData.xml
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\Microsoft.Data.Services.Client.xml
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\System.Spatial.xml
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\de\Microsoft.Data.Edm.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\es\Microsoft.Data.Edm.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\fr\Microsoft.Data.Edm.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\it\Microsoft.Data.Edm.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\ja\Microsoft.Data.Edm.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\ko\Microsoft.Data.Edm.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\ru\Microsoft.Data.Edm.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\de\Microsoft.Data.OData.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\es\Microsoft.Data.OData.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\fr\Microsoft.Data.OData.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\it\Microsoft.Data.OData.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\ja\Microsoft.Data.OData.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\ko\Microsoft.Data.OData.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\ru\Microsoft.Data.OData.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\de\Microsoft.Data.Services.Client.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\es\Microsoft.Data.Services.Client.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\fr\Microsoft.Data.Services.Client.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\it\Microsoft.Data.Services.Client.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\ja\Microsoft.Data.Services.Client.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\ko\Microsoft.Data.Services.Client.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\ru\Microsoft.Data.Services.Client.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\zh-Hans\Microsoft.Data.Services.Client.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\zh-Hant\Microsoft.Data.Services.Client.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\de\System.Spatial.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\es\System.Spatial.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\fr\System.Spatial.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\it\System.Spatial.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\ja\System.Spatial.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\ko\System.Spatial.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\ru\System.Spatial.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\zh-Hans\System.Spatial.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\zh-Hant\System.Spatial.resources.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\obj\Debug\DataService Test.exe
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\obj\Debug\DataService Test.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\obj\Debug\DataService Test.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\DataService Test\bin\Debug\Database2.sdf

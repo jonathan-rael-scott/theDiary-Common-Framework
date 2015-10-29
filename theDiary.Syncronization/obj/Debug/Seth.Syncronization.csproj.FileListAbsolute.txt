@@ -1,0 +1,10 @@
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Syncronization\obj\Debug\Seth.Syncronization.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Syncronization\bin\Debug\Seth.Syncronization.dll.config
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Syncronization\bin\Debug\Seth.Syncronization.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Syncronization\bin\Debug\Seth.Syncronization.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Syncronization\bin\Debug\EntityFramework.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Syncronization\bin\Debug\EntityFramework.xml
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Syncronization\obj\Debug\Seth.Syncronization.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Syncronization\obj\Debug\Seth.Syncronization.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Syncronization\bin\Debug\Seth.System.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Syncronization\bin\Debug\Seth.System.pdb

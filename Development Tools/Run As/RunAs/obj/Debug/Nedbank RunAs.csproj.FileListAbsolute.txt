@@ -1,0 +1,70 @@
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\obj\Debug\Nedbank RunAs.csproj.GenerateResource.Cache
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\obj\Debug\Iterative.Tools.RunAs.Properties.Resources.resources
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\bin\Debug\RunAs.exe
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\bin\Debug\RunAs.pdb
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\obj\Debug\RunAs.exe
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\obj\Debug\RunAs.pdb
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\obj\Debug\Iterative.Tools.RunAs.Controls.RunAsUserDetails.resources
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\obj\Debug\Iterative.Tools.RunAs.Controls.AddApplication.resources
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\obj\Debug\Iterative.Tools.RunAs.DialogForm.resources
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\obj\Debug\Iterative.Tools.RunAs.AboutBox.resources
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\bin\Debug\RunAs.exe.manifest
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\bin\Debug\RunAs.application
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\obj\Debug\RunAs.exe.manifest
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\obj\Debug\RunAs.application
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\obj\Debug\Iterative.Tools.RunAs.MainForm.resources
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\obj\Debug\Nedbank RunAs.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\bin\Debug\RunAs.exe.config
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\bin\Debug\Seth.System.dll
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\bin\Debug\Seth.Windows.Forms.dll
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\bin\Debug\Seth.System.pdb
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\bin\Debug\Seth.Windows.Forms.pdb
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\bin\Debug\Seth.Windows.Taskbar.dll
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\bin\Debug\Interop.SHDocVw.dll
+C:\Development\DotNot\Projects\Iterative\Nedbank Tools\Nedbank RunAs Tools\Nedbank RunAs\bin\Debug\Seth.Windows.Taskbar.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\bin\Debug\RunAs.exe.config
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\bin\Debug\RunAs.exe.manifest
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\bin\Debug\RunAs.application
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\bin\Debug\RunAs.exe
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\bin\Debug\RunAs.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\bin\Debug\Seth.System.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\bin\Debug\Seth.Windows.Forms.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\bin\Debug\Interop.SHDocVw.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\bin\Debug\Seth.System.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\bin\Debug\Seth.Windows.Forms.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\bin\Debug\Seth.Windows.Taskbar.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\obj\Debug\Nedbank RunAs.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\obj\Debug\Iterative.Tools.RunAs.Controls.AddApplication.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\obj\Debug\Iterative.Tools.RunAs.Controls.RunAsUserDetails.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\obj\Debug\Iterative.Tools.RunAs.MainForm.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\obj\Debug\Iterative.Tools.RunAs.AboutBox.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\obj\Debug\Iterative.Tools.RunAs.DialogForm.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\obj\Debug\Iterative.Tools.RunAs.Properties.Resources.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\obj\Debug\Nedbank RunAs.csproj.GenerateResource.Cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\obj\Debug\RunAs.exe.manifest
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\obj\Debug\RunAs.application
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\obj\Debug\RunAs.exe
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Run As\RunAs\obj\Debug\RunAs.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\obj\Debug\Nedbank RunAs.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\obj\Debug\Iterative.Tools.RunAs.Controls.AddApplication.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\obj\Debug\Iterative.Tools.RunAs.Controls.RunAsUserDetails.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\obj\Debug\Iterative.Tools.RunAs.MainForm.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\obj\Debug\Iterative.Tools.RunAs.AboutBox.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\obj\Debug\Iterative.Tools.RunAs.DialogForm.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\obj\Debug\Iterative.Tools.RunAs.Properties.Resources.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\obj\Debug\Nedbank RunAs.csproj.GenerateResource.Cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\obj\Debug\RunAs.exe
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\obj\Debug\RunAs.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\bin\Debug\RunAs.exe.config
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\bin\Debug\RunAs.exe.manifest
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\bin\Debug\RunAs.application
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\bin\Debug\RunAs.exe
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\bin\Debug\RunAs.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\bin\Debug\Seth.System.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\bin\Debug\Seth.Windows.Forms.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\bin\Debug\Interop.SHDocVw.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\bin\Debug\Seth.System.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\bin\Debug\Seth.Windows.Forms.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\bin\Debug\Seth.Windows.Taskbar.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\obj\Debug\RunAs.exe.manifest
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Run As\RunAs\obj\Debug\RunAs.application

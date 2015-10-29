@@ -1,0 +1,14 @@
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web\bin\Debug\Seth.Web.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web\bin\Debug\Seth.Web.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web\bin\Debug\Seth.System.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web\bin\Debug\Seth.System.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web\obj\Debug\Seth.Web.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web\obj\Debug\Seth.Web.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web\obj\Debug\Seth.Web.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web\bin\Debug\Seth.Web.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web\bin\Debug\Seth.Web.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web\bin\Debug\Seth.System.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web\bin\Debug\Seth.System.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web\obj\Debug\Seth.Web.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web\obj\Debug\Seth.Web.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web\obj\Debug\Seth.Web.pdb

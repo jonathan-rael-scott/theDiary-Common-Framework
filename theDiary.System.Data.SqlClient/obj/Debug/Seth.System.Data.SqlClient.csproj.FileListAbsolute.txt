@@ -1,0 +1,7 @@
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.System.Data.SqlClient\bin\Debug\Seth.System.Data.SqlClient.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.System.Data.SqlClient\bin\Debug\Seth.System.Data.SqlClient.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.System.Data.SqlClient\bin\Debug\Seth.System.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.System.Data.SqlClient\bin\Debug\Seth.System.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.System.Data.SqlClient\obj\Debug\Seth.System.Data.SqlClient.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.System.Data.SqlClient\obj\Debug\Seth.System.Data.SqlClient.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.System.Data.SqlClient\obj\Debug\Seth.System.Data.SqlClient.pdb

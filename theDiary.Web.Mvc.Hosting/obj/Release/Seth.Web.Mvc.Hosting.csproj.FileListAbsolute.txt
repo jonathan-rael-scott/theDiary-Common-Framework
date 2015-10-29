@@ -1,0 +1,2 @@
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web.Mvc.Hosting\obj\Release\Seth.Web.Mvc.Hosting.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\obj\Release\Seth.Web.Mvc.Hosting.csprojResolveAssemblyReference.cache

@@ -1,0 +1,7 @@
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.DocumentGeneration\bin\Debug\Seth.DocumentGeneration.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.DocumentGeneration\bin\Debug\Seth.DocumentGeneration.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.DocumentGeneration\bin\Debug\Seth.System.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.DocumentGeneration\bin\Debug\Seth.System.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.DocumentGeneration\obj\Debug\Seth.DocumentGeneration.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.DocumentGeneration\obj\Debug\Seth.DocumentGeneration.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.DocumentGeneration\obj\Debug\Seth.DocumentGeneration.pdb

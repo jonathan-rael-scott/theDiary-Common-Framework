@@ -1,0 +1,14 @@
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Wndows\bin\Debug\Seth.Windows.Forms.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Wndows\bin\Debug\Seth.Windows.Forms.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Wndows\bin\Debug\Seth.System.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Wndows\bin\Debug\Seth.System.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Wndows\obj\Debug\Seth.Windows.Forms.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Wndows\obj\Debug\Seth.Windows.Forms.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Wndows\obj\Debug\Seth.Windows.Forms.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Wndows\bin\Debug\Seth.Windows.Forms.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Wndows\bin\Debug\Seth.Windows.Forms.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Wndows\bin\Debug\Seth.System.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Wndows\bin\Debug\Seth.System.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Wndows\obj\Debug\Seth.Windows.Forms.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Wndows\obj\Debug\Seth.Windows.Forms.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Wndows\obj\Debug\Seth.Windows.Forms.pdb

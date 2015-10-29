@@ -1,0 +1,15 @@
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\bin\Debug\Host File Manager.exe.config
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\obj\Debug\Host File Manager.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\obj\Debug\Seth.Tools.Development.HostFileManager.MainForm.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\obj\Debug\Seth.Tools.Development.HostFileManager.Properties.Resources.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\obj\Debug\Host File Manager.csproj.GenerateResource.Cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\bin\Debug\Host File Manager.exe
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\bin\Debug\Host File Manager.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\obj\Debug\Host File Manager.exe
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\obj\Debug\Host File Manager.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\obj\Debug\Seth.Tools.Development.HostFileManager.Controls.IPAddressControl.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\obj\Debug\Seth.Tools.Development.HostFileManager.DialogForm.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\obj\Debug\Seth.Tools.Development.HostFileManager.Controls.HostEntryControl.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\obj\Debug\Seth.Tools.Development.HostFileManager.Controls.SearchControl.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\bin\Debug\Seth.System.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\bin\Debug\Seth.System.pdb

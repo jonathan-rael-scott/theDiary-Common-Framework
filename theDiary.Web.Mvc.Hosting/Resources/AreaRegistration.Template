@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace System.Web.Mvc.Hosting
+{
+    public class {HostedApplicationName}ApplicationAreaRegistration
+        : AreaRegistration
+    {
+		public {HostedApplicationName}ApplicationAreaRegistration()
+            : base()
+        {
+
+        }
+
+		public override string AreaName
+        {
+            get
+            {
+                return "{HostedApplicationName}";
+            }
+        }
+
+        public override void RegisterArea(AreaRegistrationContext context)
+        {
+            context.MapRoute(name: "{HostedApplicationName}_default",
+                url: "{HostedApplicationName}/{controller}/{action}/{id}",
+                defaults: new { controller = "Home", action = "Index", id = "" },
+				constraints: null,
+				namespaces: new string[]{ "{ApplicationNamespaces}" });
+        }
+    }
+}

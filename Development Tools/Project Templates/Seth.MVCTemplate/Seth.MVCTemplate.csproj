@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{81268955-02FC-41CA-8DB0-78DD64E21BE9}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Seth.ETMS</RootNamespace>
+    <AssemblyName>Seth.ETMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.3.1.7705, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.4.12182\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.4.12182\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.4.12182\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.4.12182\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.4.12182\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.4.12182\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Transactions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.30506\lib\net40\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.1\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.1\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.30506.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrations\Configuration.cs" />
+    <None Include="Models\Context.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Dependencies\Antlr3.Runtime.dll" />
+    <Content Include="Dependencies\de\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="Dependencies\de\Microsoft.Data.OData.resources.dll" />
+    <Content Include="Dependencies\de\System.Spatial.resources.dll" />
+    <None Include="Dependencies\DotNetOpenAuth.AspNet.dll" />
+    <None Include="Dependencies\DotNetOpenAuth.AspNet.xml" />
+    <None Include="Dependencies\DotNetOpenAuth.Core.dll" />
+    <None Include="Dependencies\DotNetOpenAuth.Core.xml" />
+    <None Include="Dependencies\DotNetOpenAuth.OAuth.Consumer.dll" />
+    <None Include="Dependencies\DotNetOpenAuth.OAuth.Consumer.xml" />
+    <None Include="Dependencies\DotNetOpenAuth.OAuth.dll" />
+    <None Include="Dependencies\DotNetOpenAuth.OAuth.xml" />
+    <None Include="Dependencies\DotNetOpenAuth.OpenId.dll" />
+    <None Include="Dependencies\DotNetOpenAuth.OpenId.RelyingParty.dll" />
+    <None Include="Dependencies\DotNetOpenAuth.OpenId.RelyingParty.xml" />
+    <None Include="Dependencies\DotNetOpenAuth.OpenId.xml" />
+    <None Include="Dependencies\EntityFramework.dll" />
+    <None Include="Dependencies\EntityFramework.SqlServer.dll" />
+    <None Include="Dependencies\EntityFramework.SqlServer.xml" />
+    <None Include="Dependencies\EntityFramework.xml" />
+    <Content Include="Dependencies\es\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="Dependencies\es\Microsoft.Data.OData.resources.dll" />
+    <Content Include="Dependencies\es\System.Spatial.resources.dll" />
+    <Content Include="Dependencies\fr\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="Dependencies\fr\Microsoft.Data.OData.resources.dll" />
+    <Content Include="Dependencies\fr\System.Spatial.resources.dll" />
+    <Content Include="Dependencies\it\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="Dependencies\it\Microsoft.Data.OData.resources.dll" />
+    <Content Include="Dependencies\it\System.Spatial.resources.dll" />
+    <Content Include="Dependencies\ja\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="Dependencies\ja\Microsoft.Data.OData.resources.dll" />
+    <Content Include="Dependencies\ja\System.Spatial.resources.dll" />
+    <Content Include="Dependencies\ko\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="Dependencies\ko\Microsoft.Data.OData.resources.dll" />
+    <Content Include="Dependencies\ko\System.Spatial.resources.dll" />
+    <None Include="Dependencies\Microsoft.Data.Edm.dll" />
+    <None Include="Dependencies\Microsoft.Data.Edm.xml" />
+    <None Include="Dependencies\Microsoft.Data.OData.dll" />
+    <None Include="Dependencies\Microsoft.Data.OData.xml" />
+    <None Include="Dependencies\Microsoft.Web.Infrastructure.dll" />
+    <None Include="Dependencies\Microsoft.Web.Mvc.FixedDisplayModes.dll" />
+    <None Include="Dependencies\Microsoft.Web.WebPages.OAuth.dll" />
+    <None Include="Dependencies\Microsoft.Web.WebPages.OAuth.xml" />
+    <None Include="Dependencies\Mono.Math.dll" />
+    <None Include="Dependencies\Mono.Math.xml" />
+    <None Include="Dependencies\Newtonsoft.Json.dll" />
+    <None Include="Dependencies\Newtonsoft.Json.xml" />
+    <None Include="Dependencies\Org.Mentalis.Security.Cryptography.dll" />
+    <None Include="Dependencies\Org.Mentalis.Security.Cryptography.xml" />
+    <Content Include="Dependencies\ru\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="Dependencies\ru\Microsoft.Data.OData.resources.dll" />
+    <Content Include="Dependencies\ru\System.Spatial.resources.dll" />
+    <None Include="Dependencies\Seth.EntityFramework.V5.dll" />
+    <None Include="Dependencies\Seth.System.dll" />
+    <None Include="Dependencies\Seth.TMS.dll" />
+    <None Include="Dependencies\Seth.Web.dll" />
+    <None Include="Dependencies\Seth.Web.Mvc.dll" />
+    <None Include="Dependencies\Seth.Web.Mvc.Hosting.dll" />
+    <None Include="Dependencies\System.Net.Http.Extensions.dll" />
+    <None Include="Dependencies\System.Net.Http.Extensions.xml" />
+    <None Include="Dependencies\System.Net.Http.Formatting.dll" />
+    <None Include="Dependencies\System.Net.Http.Formatting.xml" />
+    <None Include="Dependencies\System.Net.Http.Primitives.dll" />
+    <None Include="Dependencies\System.Net.Http.Primitives.xml" />
+    <None Include="Dependencies\System.Spatial.dll" />
+    <None Include="Dependencies\System.Spatial.xml" />
+    <None Include="Dependencies\System.Web.Helpers.dll" />
+    <None Include="Dependencies\System.Web.Helpers.xml" />
+    <None Include="Dependencies\System.Web.Http.dll" />
+    <None Include="Dependencies\System.Web.Http.OData.dll" />
+    <None Include="Dependencies\System.Web.Http.OData.xml" />
+    <None Include="Dependencies\System.Web.Http.WebHost.dll" />
+    <None Include="Dependencies\System.Web.Http.WebHost.xml" />
+    <None Include="Dependencies\System.Web.Http.xml" />
+    <None Include="Dependencies\System.Web.Optimization.dll" />
+    <None Include="Dependencies\System.Web.Razor.dll" />
+    <None Include="Dependencies\System.Web.Razor.xml" />
+    <None Include="Dependencies\System.Web.WebPages.Deployment.dll" />
+    <None Include="Dependencies\System.Web.WebPages.Deployment.xml" />
+    <None Include="Dependencies\System.Web.WebPages.dll" />
+    <None Include="Dependencies\System.Web.WebPages.Razor.dll" />
+    <None Include="Dependencies\System.Web.WebPages.Razor.xml" />
+    <None Include="Dependencies\System.Web.WebPages.xml" />
+    <None Include="Dependencies\WebGrease.dll" />
+    <None Include="Dependencies\WebMatrix.Data.dll" />
+    <None Include="Dependencies\WebMatrix.Data.xml" />
+    <None Include="Dependencies\WebMatrix.WebData.dll" />
+    <None Include="Dependencies\WebMatrix.WebData.xml" />
+    <Content Include="Dependencies\zh-Hans\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="Dependencies\zh-Hans\Microsoft.Data.OData.resources.dll" />
+    <Content Include="Dependencies\zh-Hans\System.Spatial.resources.dll" />
+    <Content Include="Dependencies\zh-Hant\Microsoft.Data.Edm.resources.dll" />
+    <Content Include="Dependencies\zh-Hant\Microsoft.Data.OData.resources.dll" />
+    <Content Include="Dependencies\zh-Hant\System.Spatial.resources.dll" />
+    <Content Include="Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Seth.System\Seth.System.csproj">
+      <Project>{969581e6-8d34-465f-b31a-b457d46a80ad}</Project>
+      <Name>Seth.System</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Seth.Web.Mvc\Seth.Web.Mvc.csproj">
+      <Project>{76240c28-cc66-4cde-b3b2-30acc58330c3}</Project>
+      <Name>Seth.Web.Mvc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Seth.Web\Seth.Web.csproj">
+      <Project>{bf1419fe-e559-4fd6-85a2-8bb3c5549777}</Project>
+      <Name>Seth.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Seth.Web.Mvc.Hosting\Seth.Web.Mvc.Hosting.csproj">
+      <Project>{0d79845f-86be-4d42-86d7-dc591fe76d67}</Project>
+      <Name>Seth.Web.Mvc.Hosting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Seth.EntityFramework.V5\Seth.EntityFramework.V5.csproj">
+      <Project>{727779ef-059e-4b3b-92cb-dfe38792e6ac}</Project>
+      <Name>Seth.EntityFramework.V5</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Dependencies\af\" />
+    <Folder Include="Views\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7500</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

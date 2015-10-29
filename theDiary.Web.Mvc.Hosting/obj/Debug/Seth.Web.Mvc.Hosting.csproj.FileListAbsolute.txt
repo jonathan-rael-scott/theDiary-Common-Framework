@@ -1,0 +1,64 @@
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Web.Mvc.Hosting\obj\Debug\Seth.Web.Mvc.Hosting.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.Web.Mvc.Hosting.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.Web.Mvc.Hosting.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.EntityFramework.V5.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.System.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.Web.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.Web.Mvc.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Web.Mvc.Hosting\bin\Debug\System.Web.Http.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Web.Mvc.Hosting\bin\Debug\System.Net.Http.Formatting.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Web.Mvc.Hosting\bin\Debug\Newtonsoft.Json.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.EntityFramework.V5.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.System.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.Web.Mvc.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.Web.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Web.Mvc.Hosting\bin\Debug\System.Web.Http.xml
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Web.Mvc.Hosting\bin\Debug\System.Net.Http.Formatting.xml
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Web.Mvc.Hosting\obj\Debug\Seth.Web.Mvc.Hosting.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Web.Mvc.Hosting\obj\Debug\Seth.Web.Mvc.Hosting.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.Web.Mvc.Hosting.dll.config
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Web.Mvc.Hosting\bin\Debug\EntityFramework.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Web.Mvc.Hosting\bin\Debug\EntityFramework.xml
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.Web.Mvc.Hosting.dll.config
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.Web.Mvc.Hosting.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.Web.Mvc.Hosting.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.EntityFramework.V5.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.System.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.Web.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.Web.Mvc.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web.Mvc.Hosting\bin\Debug\System.Web.Http.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web.Mvc.Hosting\bin\Debug\System.Net.Http.Formatting.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web.Mvc.Hosting\bin\Debug\Newtonsoft.Json.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.EntityFramework.V5.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.System.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.Web.Mvc.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.Web.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web.Mvc.Hosting\bin\Debug\System.Web.Http.xml
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web.Mvc.Hosting\bin\Debug\System.Net.Http.Formatting.xml
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web.Mvc.Hosting\obj\Debug\Seth.Web.Mvc.Hosting.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web.Mvc.Hosting\obj\Debug\Seth.Web.Mvc.Hosting.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Web.Mvc.Hosting\obj\Debug\Seth.Web.Mvc.Hosting.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.Web.Mvc.Hosting.dll.config
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.Web.Mvc.Hosting.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.Web.Mvc.Hosting.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.EntityFramework.V5.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.System.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.Web.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.Web.Mvc.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\bin\Debug\System.Web.Http.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\bin\Debug\System.Net.Http.Formatting.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\bin\Debug\Newtonsoft.Json.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.EntityFramework.V5.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.System.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.Web.Mvc.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\bin\Debug\Seth.Web.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\bin\Debug\System.Web.Http.xml
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\bin\Debug\System.Net.Http.Formatting.xml
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\obj\Debug\Seth.Web.Mvc.Hosting.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\obj\Debug\Seth.Web.Mvc.Hosting.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\obj\Debug\Seth.Web.Mvc.Hosting.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\bin\Debug\HtmlAgilityPack.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\bin\Debug\System.Linq.Dynamic.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\bin\Debug\HtmlAgilityPack.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\bin\Debug\HtmlAgilityPack.xml
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Web.Mvc.Hosting\bin\Debug\Newtonsoft.Json.xml

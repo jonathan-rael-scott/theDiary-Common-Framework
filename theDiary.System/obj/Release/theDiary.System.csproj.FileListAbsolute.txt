@@ -1,0 +1,4 @@
+C:\Development\DotNot\Projects\Personal\Framework\theDiary.System\bin\Release\theDiary.System.dll
+C:\Development\DotNot\Projects\Personal\Framework\theDiary.System\bin\Release\theDiary.System.pdb
+C:\Development\DotNot\Projects\Personal\Framework\theDiary.System\obj\Release\theDiary.System.dll
+C:\Development\DotNot\Projects\Personal\Framework\theDiary.System\obj\Release\theDiary.System.pdb

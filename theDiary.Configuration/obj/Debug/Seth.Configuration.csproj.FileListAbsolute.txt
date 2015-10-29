@@ -1,0 +1,1 @@
+C:\Development\DotNot\Projects\Iterative\Framework\Seth.Configuration\obj\Debug\Seth.Configuration.csprojResolveAssemblyReference.cache

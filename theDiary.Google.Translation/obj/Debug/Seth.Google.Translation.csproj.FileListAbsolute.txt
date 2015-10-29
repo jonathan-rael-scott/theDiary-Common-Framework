@@ -1,0 +1,9 @@
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Google.Translation\bin\Debug\Seth.Google.Translation.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Google.Translation\bin\Debug\Seth.Google.Translation.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Google.Translation\bin\Debug\GoogleTranslateWithNoApiHelper.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Google.Translation\bin\Debug\Seth.System.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Google.Translation\bin\Debug\Newtonsoft.Json.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Google.Translation\bin\Debug\Seth.System.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Google.Translation\obj\Debug\Seth.Google.Translation.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Google.Translation\obj\Debug\Seth.Google.Translation.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Google.Translation\obj\Debug\Seth.Google.Translation.pdb

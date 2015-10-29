@@ -1,0 +1,9 @@
+﻿<table>
+	<tr>
+	<th>{Title:Column1}</th>
+	<th>{Title:Column2}</th>
+	<th>{Title:Column3}</th>
+	<th>{Title:Column4}</th>
+	</tr>
+	<tr><td colspan="4"><b>{Body:Main}</b></td>
+</table>

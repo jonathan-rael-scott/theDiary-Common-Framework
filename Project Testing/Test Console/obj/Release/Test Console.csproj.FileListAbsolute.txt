@@ -1,0 +1,8 @@
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\Test Console\bin\Release\Test Console.exe.config
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\Test Console\bin\Release\Test Console.exe
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\Test Console\bin\Release\Test Console.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\Test Console\bin\Release\Seth.System.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\Test Console\bin\Release\Seth.System.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\Test Console\obj\Release\Test Console.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\Test Console\obj\Release\Test Console.exe
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Project Testing\Test Console\obj\Release\Test Console.pdb

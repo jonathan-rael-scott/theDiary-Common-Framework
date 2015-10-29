@@ -1,0 +1,8 @@
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Windows.Taskbar\obj\Debug\Interop.SHDocVw.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Windows.Taskbar\obj\Debug\Seth.Windows.Taskbar.csproj.ResolveComReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Windows.Taskbar\bin\Debug\Seth.Windows.Taskbar.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Windows.Taskbar\bin\Debug\Seth.Windows.Taskbar.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Windows.Taskbar\bin\Debug\Interop.SHDocVw.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Windows.Taskbar\obj\Debug\Seth.Windows.Taskbar.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Windows.Taskbar\obj\Debug\Seth.Windows.Taskbar.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Windows.Taskbar\obj\Debug\Seth.Windows.Taskbar.csprojResolveAssemblyReference.cache

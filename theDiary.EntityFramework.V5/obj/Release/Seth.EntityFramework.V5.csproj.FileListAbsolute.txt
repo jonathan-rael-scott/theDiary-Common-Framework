@@ -1,0 +1,16 @@
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.EntityFramework.V5\bin\Release\Seth.EntityFramework.V5.dll.config
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.EntityFramework.V5\bin\Release\Seth.EntityFramework.V5.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.EntityFramework.V5\bin\Release\Seth.EntityFramework.V5.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.EntityFramework.V5\bin\Release\Seth.System.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.EntityFramework.V5\bin\Release\Seth.System.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.EntityFramework.V5\obj\Release\Seth.EntityFramework.V5.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.EntityFramework.V5\obj\Release\Seth.EntityFramework.V5.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.EntityFramework.V5\obj\Release\Seth.EntityFramework.V5.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.EntityFramework.V5\bin\Release\Seth.EntityFramework.V5.dll.config
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.EntityFramework.V5\bin\Release\Seth.EntityFramework.V5.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.EntityFramework.V5\bin\Release\Seth.EntityFramework.V5.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.EntityFramework.V5\bin\Release\Seth.System.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.EntityFramework.V5\bin\Release\Seth.System.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.EntityFramework.V5\obj\Release\Seth.EntityFramework.V5.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.EntityFramework.V5\obj\Release\Seth.EntityFramework.V5.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.EntityFramework.V5\obj\Release\Seth.EntityFramework.V5.pdb

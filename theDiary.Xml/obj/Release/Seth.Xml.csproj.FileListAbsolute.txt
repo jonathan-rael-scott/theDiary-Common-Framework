@@ -1,0 +1,2 @@
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Seth.Xml\obj\Release\Seth.Xml.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Seth.Xml\obj\Release\Seth.Xml.csprojResolveAssemblyReference.cache

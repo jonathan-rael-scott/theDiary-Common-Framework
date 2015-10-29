@@ -1,0 +1,16 @@
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Http Checker\obj\Release\Http Checker.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Http Checker\obj\Release\Seth.Tools.Development.HttpChecker.Controls.RequestContainer.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Http Checker\obj\Release\Seth.Tools.Development.HttpChecker.Controls.RequestDetails.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Http Checker\obj\Release\Seth.Tools.Development.HttpChecker.Controls.RequestHeaders.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Http Checker\obj\Release\Seth.Tools.Development.HttpChecker.Form1.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Http Checker\obj\Release\Seth.Tools.Development.HttpChecker.Properties.Resources.resources
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Http Checker\obj\Release\Http Checker.csproj.GenerateResource.Cache
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Http Checker\bin\Release\Http Checker.exe.config
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Http Checker\bin\Release\Http Checker.exe
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Http Checker\bin\Release\Http Checker.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Http Checker\bin\Release\Seth.System.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Http Checker\bin\Release\Seth.Windows.Forms.dll
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Http Checker\bin\Release\Seth.System.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Http Checker\bin\Release\Seth.Windows.Forms.pdb
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Http Checker\obj\Release\Http Checker.exe
+C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\Development Tools\Http Checker\obj\Release\Http Checker.pdb

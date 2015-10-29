@@ -1,0 +1,25 @@
+﻿using System;
+using System.Data.Entity;
+using System.Data.Entity.Migrations.Infrastructure;
+{Template:UsingClauseNamespaces}
+
+namespace Seth.Web.Mvc.DynamicContext
+{
+    public sealed class {ClassName}
+		: DbContext
+    {
+		public {ClassName}()
+            : base("DefaultConnection")
+        {
+
+        }
+
+		public {ClassName}(string connectionStringName)
+            : base(connectionStringName)
+        {
+
+        }
+
+        {Template:DbSets}
+    }
+}
