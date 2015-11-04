@@ -80,6 +80,7 @@
     <Compile Include="IO\Extensions.Stream.cs" />
     <Compile Include="IO\MimeTypeHelper.cs" />
     <Compile Include="Net\IPAddressRange.cs" />
+    <Compile Include="Percentage.cs" />
     <Compile Include="Runtime\Serialization\Extensions.Serialization.cs" />
     <Compile Include="Collections\Generic\GroupedList.cs" />
     <Compile Include="EnumHelper.cs" />
