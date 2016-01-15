@@ -1,1 +1,2 @@
 C:\Development\DotNot\Projects\Personal\Framework\theDiary.Web.Mvc.Hosting\obj\Release\theDiary.Web.Mvc.Hosting.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.Web.Mvc.Hosting\obj\Release\theDiary.Web.Mvc.Hosting.csprojResolveAssemblyReference.cache

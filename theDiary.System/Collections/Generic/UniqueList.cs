@@ -116,6 +116,10 @@ namespace System.Collections.Generic
             this.Items.Add(item);
         }
 
+        protected void AddRange(IEnumerable<T> items)
+        {
+            items.AsParallel().ForAll(item => this.Items.Add(item));
+        }
         public void Clear()
         {
             this.Items.Clear();

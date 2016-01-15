@@ -15,3 +15,11 @@ C:\Development\DotNot\Projects\Personal\Framework\Development Tools\Guid Creator
 C:\Development\DotNot\Projects\Personal\Framework\Development Tools\Guid Creator\obj\Release\Guid Creator.csproj.GenerateResource.Cache
 C:\Development\DotNot\Projects\Personal\Framework\Development Tools\Guid Creator\obj\Release\Guid Creator.exe
 C:\Development\DotNot\Projects\Personal\Framework\Development Tools\Guid Creator\obj\Release\Guid Creator.pdb
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Guid Creator\bin\Release\Guid Creator.exe.config
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Guid Creator\bin\Release\Guid Creator.exe
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Guid Creator\bin\Release\Guid Creator.pdb
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Guid Creator\obj\Release\Guid_Creator.Form1.resources
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Guid Creator\obj\Release\Guid_Creator.Properties.Resources.resources
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Guid Creator\obj\Release\Guid Creator.csproj.GenerateResource.Cache
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Guid Creator\obj\Release\Guid Creator.exe
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Guid Creator\obj\Release\Guid Creator.pdb

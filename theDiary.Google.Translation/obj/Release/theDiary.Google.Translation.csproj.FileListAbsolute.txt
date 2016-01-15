@@ -7,3 +7,11 @@ C:\Development\DotNot\Projects\Personal\Framework\theDiary.Google.Translation\bi
 C:\Development\DotNot\Projects\Personal\Framework\theDiary.Google.Translation\obj\Release\theDiary.Google.Translation.csprojResolveAssemblyReference.cache
 C:\Development\DotNot\Projects\Personal\Framework\theDiary.Google.Translation\obj\Release\Seth.Google.Translation.dll
 C:\Development\DotNot\Projects\Personal\Framework\theDiary.Google.Translation\obj\Release\Seth.Google.Translation.pdb
+C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.Google.Translation\bin\Release\Seth.Google.Translation.dll
+C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.Google.Translation\bin\Release\Seth.Google.Translation.pdb
+C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.Google.Translation\bin\Release\theDiary.System.dll
+C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.Google.Translation\bin\Release\Newtonsoft.Json.dll
+C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.Google.Translation\bin\Release\theDiary.System.pdb
+C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.Google.Translation\obj\Release\theDiary.Google.Translation.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.Google.Translation\obj\Release\Seth.Google.Translation.dll
+C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.Google.Translation\obj\Release\Seth.Google.Translation.pdb

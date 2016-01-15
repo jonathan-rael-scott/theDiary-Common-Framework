@@ -10,13 +10,16 @@ namespace theDiary.Xml
 {
     public static class SerializationHelper
     {
-        private static readonly Lazy<IEnumerable<Type>> primitiveTypes = new Lazy<IEnumerable<Type>>(SerializationHelper.GetPrimitiveTypes, true);
+        private static readonly Lazy<PrimitiveTypeMappings> primitiveTypes = new Lazy<PrimitiveTypeMappings>();
         private const string SerializerTypeFormat = "{0}.{1}";
-        private static readonly Func<IEnumerable<Type>> GetPrimitiveTypes = new Func<IEnumerable<Type>>(()=>typeof(int).Assembly.GetTypes().Where(a=>a.IsPrimitive || a.Equals(typeof(string))));
-        
-        
 
-        
+        internal static PrimitiveTypeMappings PrimitiveTypes
+        {
+            get
+            {
+                return SerializationHelper.primitiveTypes.Value;
+            }
+        }
 
         public static void Serialize(object instance, out string xmlContent, out string serializerType)
         {
@@ -24,7 +27,7 @@ namespace theDiary.Xml
             xmlContent = string.Empty;
             Type instanceType = typeof(object);
             if (instance != null)
-            {                
+            {
                 if (instanceType.IsPrimitive || instanceType == typeof(string))
                 {
                     xmlContent = string.Format("<{0}>{1}</{0}>", instanceType.Name, instance);
@@ -55,7 +58,7 @@ namespace theDiary.Xml
             SerializerTypes serializerTypeValue;
             Type instanceType;
             GetSerializerDetails(serializerType, out serializerTypeValue, out instanceType);
-            
+
             if (serializerTypeValue == SerializerTypes.XmlSerializer)
             {
                 StringReader sww = new StringReader(xmlContent);
@@ -64,7 +67,8 @@ namespace theDiary.Xml
                 returnValue = serializer.Deserialize(reader);
             }
             else if (serializerTypeValue == SerializerTypes.XmlObjectSerializer)
-            {   XmlObjectSerializer serializer = new XmlObjectSerializer();
+            {
+                XmlObjectSerializer serializer = new XmlObjectSerializer();
                 returnValue = serializer.Deserialize(xmlContent, true);
             }
             else
@@ -82,34 +86,42 @@ namespace theDiary.Xml
             return returnValue;
         }
 
-        private static void GetSerializerDetails(string serializerType, out SerializerTypes serializerTypeValue, out Type serializedType)
+        private static void GetSerializerDetails(string serializerType, out SerializerTypes serializerTypeValue,
+                                                 out Type serializedType)
         {
+            serializerTypeValue = default(SerializerTypes);
+            serializedType = default(Type);
+
             int index = serializerType.IndexOf(".");
             string serializerTypeValueString = serializerType.Substring(0, serializerType.IndexOf("."));
             string serializedTypeName = serializerType.Substring(index + 1);
-                        
-            var primitiveType = GetPrimitiveTypeMapping().Where(a=>a.Item2.Equals(serializedTypeName, StringComparison.OrdinalIgnoreCase) || a.Item3.Equals(serializedTypeName, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
-            if (primitiveType != null)
+
+            if (SerializationHelper.PrimitiveTypes.Contains(serializedTypeName))
             {
+                serializedType = SerializationHelper.PrimitiveTypes[serializedTypeName];
                 serializerTypeValue = SerializerTypes.Primitive;
                 return;
             }
-            else
-            if (serializedTypeName.IsAny(StringComparison.OrdinalIgnoreCase, "int", "string", "double", "float", "long"))
-            serializedType = Type.GetType(serializedTypeName);
-            serializerTypeValue = (SerializerTypes) Enum.Parse(typeof(SerializerTypes), serializerTypeValueString);
+            else if (serializedTypeName.IsAny(StringComparison.OrdinalIgnoreCase, "int", "string", "double", "float", "long"))
+            {
+
+                serializedType = Type.GetType(serializedTypeName);
+                serializerTypeValue = (SerializerTypes) Enum.Parse(typeof(SerializerTypes), serializerTypeValueString);
+            }
         }
 
-        private static IEnumerable<Tuple<Type, string, string>> GetPrimitiveTypeMapping()
+        private static IEnumerable<string> GetPrimitiveTypeNames(bool fullName)
         {
-            return (from type in SerializationHelper.primitiveTypes.Value
-                    select new Tuple<Type, string, string>(type, type.FullName, type.Name));
+            return SerializationHelper.primitiveTypes.Value.Select<PrimitiveTypeMapping, string>(type => (fullName) ? type.FullName : type.Name);
         }
 
         private static bool TryGetPrimitiveType(string typeName, out Type primitiveType)
         {
+            primitiveType = default(Type);
             if (typeName.StartsWith("System.", StringComparison.OrdinalIgnoreCase))
-                primitiveType = SerializationHelper.GetPrimitiveTypeNames(true).Where(a => a.Equals(typeName, StringComparison.OrdinalIgnoreCase)).FirstOrDefault();
+                primitiveType = SerializationHelper.primitiveTypes.Value[typeName];
+
+            return primitiveType != null;
         }
     }
 }

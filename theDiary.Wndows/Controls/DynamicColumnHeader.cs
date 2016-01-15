@@ -56,7 +56,7 @@ namespace System.Windows.Forms.Controls
         private IOrdinalMetaData metaData;
 
         #region Public Properties
-        [System.ComponentModel.DesignTimeVisible(false)]
+        
         public PropertyInfo AssociatedProperty
         {
             get

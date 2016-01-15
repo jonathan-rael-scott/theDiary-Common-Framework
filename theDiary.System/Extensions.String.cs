@@ -11,7 +11,12 @@ namespace System
     /// </summary>
     public static partial class StringExtensions
     {
-        #region IsNull Methods & Functions
+        public static bool IsAny(this string value, StringComparison comparisonType, params string[] comparisonValues)
+        {
+            return comparisonValues.Any(val => value.Equals(val, comparisonType));
+        }
+
+    #region IsNull Methods & Functions
         /// <summary>
         /// Determines if the <paramref name="value"/> is either a <c>Null</c> instance, or is an <c>Empty</c> <see cref="string"/>.
         /// </summary>

@@ -9,7 +9,7 @@ namespace theDiary.Tools.Development.HostFileManager
         : Singleton<Configuration>, System.ComponentModel.INotifyPropertyChanged
 
     {
-        private Configuration()
+        public  Configuration()
             : base()
         {
         }

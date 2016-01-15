@@ -106,11 +106,7 @@ namespace System.Windows.Forms.Controls
             this.Columns.Clear();
             properties.ForEachAsParallel(property => this.Columns.Add(new DynamicColumnHeader(property)));
         }
-
-        private IEnumerable<ListViewGroup> CreateGroups(IEnumerable<PropertyInfo> properties)
-        {
-
-        }
+        
     }
 
 

@@ -6,3 +6,11 @@ C:\Development\DotNot\Projects\Personal\Framework\theDiary.EntityFramework.V5\bi
 C:\Development\DotNot\Projects\Personal\Framework\theDiary.EntityFramework.V5\obj\Release\theDiary.EntityFramework.V5.csprojResolveAssemblyReference.cache
 C:\Development\DotNot\Projects\Personal\Framework\theDiary.EntityFramework.V5\obj\Release\Seth.EntityFramework.V5.dll
 C:\Development\DotNot\Projects\Personal\Framework\theDiary.EntityFramework.V5\obj\Release\Seth.EntityFramework.V5.pdb
+C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.EntityFramework.V5\bin\Release\Seth.EntityFramework.V5.dll.config
+C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.EntityFramework.V5\bin\Release\Seth.EntityFramework.V5.dll
+C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.EntityFramework.V5\bin\Release\Seth.EntityFramework.V5.pdb
+C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.EntityFramework.V5\bin\Release\theDiary.System.dll
+C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.EntityFramework.V5\bin\Release\theDiary.System.pdb
+C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.EntityFramework.V5\obj\Release\theDiary.EntityFramework.V5.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.EntityFramework.V5\obj\Release\Seth.EntityFramework.V5.dll
+C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.EntityFramework.V5\obj\Release\Seth.EntityFramework.V5.pdb

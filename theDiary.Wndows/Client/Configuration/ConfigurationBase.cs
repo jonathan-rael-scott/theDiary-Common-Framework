@@ -106,7 +106,7 @@ namespace System.Windows.Forms.Client.Configuration
         {
             get
             {
-                return (ListItemsView)Enum.Parse(typeof(ListItemsView), ConfigurationHelper.ReadStringConfiguration("CurrentItemsView", ListItemsView.MediumIcon.ToString()), true);
+                return (ListItemsView)Enum.Parse(typeof(ListItemsView), ConfigurationHelper.ReadConfiguration("CurrentItemsView", ListItemsView.MediumIcon.ToString()), true);
             }
             set
             {

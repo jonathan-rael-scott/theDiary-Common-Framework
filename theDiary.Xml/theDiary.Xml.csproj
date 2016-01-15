@@ -43,6 +43,8 @@
     <Compile Include="Extensions.Xml.cs" />
     <Compile Include="MemberInfox.cs" />
     <Compile Include="OnErrorAction.cs" />
+    <Compile Include="PrimitiveTypeMapping.cs" />
+    <Compile Include="PrimitiveTypeMappingCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SerializationHelper.cs" />
     <Compile Include="SerializerTypes.cs" />
