@@ -10,27 +10,16 @@ namespace theDiary.Tools.Development.HostFileManager
         : ClientActionGroupBase<T>, IClientControlAction<System.Windows.Forms.ToolStripButton>
     {
         #region Constructors
-        public ToolstripButtonAction(string groupName, string actionName, ActionEventHandler executeHandler, int imageIndex, string text, string tooltip)
+        public ToolstripButtonAction(string groupName, string actionName, ActionEventHandler executeHandler, dynamic additional = null)
             : base(groupName, actionName, executeHandler)
         {
-            this.ImageIndex = imageIndex;
-            this.text = text;
-            this.Tooltip = tooltip;
+            this.Additional = additional;
         }
 
-        public ToolstripButtonAction(string actionName, ActionEventHandler executeHandler, int imageIndex, string text, string tooltip)
-            : this(null, actionName, executeHandler, imageIndex, text, tooltip)
+        public ToolstripButtonAction(string actionName, ActionEventHandler executeHandler, dynamic additional = null)
+            : base(null, actionName, executeHandler)
         {
-        }
-
-        public ToolstripButtonAction(string actionName, ActionEventHandler executeHandler, int imageIndex, string text)
-            : this(null, actionName, executeHandler, imageIndex, text, string.Empty)
-        {
-        }
-
-        public ToolstripButtonAction(string groupName, string actionName, ActionEventHandler executeHandler, int imageIndex, string text)
-            : this(groupName, actionName, executeHandler, imageIndex, text, string.Empty)
-        {
+            this.Additional = additional;
         }
         #endregion
 
@@ -50,28 +39,15 @@ namespace theDiary.Tools.Development.HostFileManager
             }
         }
 
-        public int ImageIndex { get; private set; }
-
-        public string Tooltip { get; private set; }
-
-        public bool HasTooltip
-        {
-            get
-            {
-                return !string.IsNullOrWhiteSpace(this.Tooltip);
-            }
-        }
         #endregion
 
         #region Public Methods & Functions
         public void SetControl(System.Windows.Forms.ToolStripButton control)
         {
             control.Text = this.Text;
-            control.ImageIndex = this.ImageIndex;
-            control.ToolTipText = this.Tooltip;
-            control.AutoToolTip = this.HasTooltip;
 
             control.Click += (s, e) => this.Execute(s, new ActionEventArgs(this));
+            this.SetFromAdditional(control);
         }
         #endregion
     }

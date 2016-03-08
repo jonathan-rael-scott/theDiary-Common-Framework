@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,31 +10,34 @@ namespace theDiary.Tools.Development.HostFileManager
     public class MenuItemAction
         : ClientActionBase, IClientControlAction<System.Windows.Forms.ToolStripMenuItem>
     {
-        public MenuItemAction(string actionName, ActionEventHandler executeHandler)
+        public MenuItemAction(string actionName, ActionEventHandler executeHandler, dynamic additional = null)
             : this(null, actionName, null, executeHandler)
         {
             this.Text = actionName;
+            this.Additional = additional;
         }
 
-        public MenuItemAction(string parentPath, string actionName, ActionEventHandler executeHandler)
+        public MenuItemAction(string parentPath, string actionName, ActionEventHandler executeHandler, dynamic additional = null)
             : this(parentPath, actionName, null, executeHandler)
         {
             this.Text = actionName;
             this.ParentPath = parentPath;
+            this.Additional = additional;
         }
 
-        public MenuItemAction(string parentPath, string actionName, string text, ActionEventHandler executeHandler)
+        public MenuItemAction(string parentPath, string actionName, string text, ActionEventHandler executeHandler, dynamic additional = null)
             : base(actionName, executeHandler)
         {
             this.ParentPath = parentPath ?? string.Empty;
             this.Text = text ?? actionName;
+            this.Additional = additional;
         }
-
+        
         public string Text { get; private set; }
 
         public string ParentPath { get; private set; }
 
-
+        
         private System.Windows.Forms.ToolStripMenuItem GetParent(System.Windows.Forms.ToolStripMenuItem container, IEnumerable<string> parents)
         {
             System.Windows.Forms.ToolStripMenuItem returnValue = null;
@@ -102,6 +106,8 @@ namespace theDiary.Tools.Development.HostFileManager
         {
             control.Text = this.Text;
             control.Click += (s, e) => this.Execute(s, new ActionEventArgs(this));
+
+            this.SetFromAdditional(control);
         }
     }
 }

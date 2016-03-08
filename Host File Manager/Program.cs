@@ -14,9 +14,10 @@ namespace theDiary.Tools.Development.HostFileManager
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            ElevatedApplication.EnableVisualStyles();
+            ElevatedApplication.SetCompatibleTextRenderingDefault(false);
+            ElevatedApplication.SetElevationRequirement(ApplicationElevationRequirement.ElevationNotRequired);
+            ElevatedApplication.Run(new MainForm());
         }
     }
 }

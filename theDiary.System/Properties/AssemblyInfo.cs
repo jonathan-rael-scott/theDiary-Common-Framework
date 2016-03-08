@@ -6,12 +6,12 @@ using System.Resources;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Seth.System")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("theDiary.System")]
+[assembly: AssemblyDescription("Addon package for the Microsoft.Net framework for the System namespace.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Seth Consulting")]
-[assembly: AssemblyProduct("Seth.System")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
+[assembly: AssemblyCompany("theDiary Software")]
+[assembly: AssemblyProduct("theDiary.System")]
+[assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 //[assembly: AssemblyKeyName("VS_KEY_3A8E11944B9E295A")]

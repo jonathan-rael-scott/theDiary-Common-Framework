@@ -20,11 +20,12 @@ namespace System
             return (interfaces != null && interfaces.Length != 0);
         }
 
-        private static bool HasInteraceCheck(Type typeObj, object criteria)
-        {
-            return typeObj.Equals(criteria);
-        }
-
+        /// <summary>
+        /// Determines if the specified <paramref name="attributeProvider"/> has an attribute of <typeparamref name="T"/> in its full implementation hierarchy.
+        /// </summary>
+        /// <typeparam name="T">The <see cref="Type"/> of the attribute to locate.</typeparam>
+        /// <param name="attributeProvider">The <see cref="ICustomAttributeProvider"/> instance to check.</param>
+        /// <returns><c>True</c> if the <paramref name="attributeProvider"/> has an attribute of <typeparamref name="T"/>; otherwisew <c>False</c>.</returns>
         public static bool HasAttribute<T>(this ICustomAttributeProvider attributeProvider)
                 where T : Attribute
         {
@@ -34,8 +35,7 @@ namespace System
         public static bool HasAttribute<T>(this ICustomAttributeProvider attributeProvider, bool inherited)
             where T : Attribute
         {
-            object[] attributes = attributeProvider.GetCustomAttributes(typeof(T), inherited);
-            return (attributes != null && attributes.Length > 0);
+            return attributeProvider.GetCustomAttributes(typeof(T), inherited).IsNullOrEmpty();
         }
 
         public static T GetAttribute<T>(this ICustomAttributeProvider attributeProvider)

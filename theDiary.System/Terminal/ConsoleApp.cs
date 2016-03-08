@@ -9,9 +9,16 @@ using System.Threading.Tasks;
 
 namespace System.Terminal
 {
+    /// <summary>
+    /// Represents the standard input, output, and error streams for console applications with an easier implementation for access to methods and functionality. 
+    /// This class cannot be inherited.To browse the .NET Framework source code for the <see cref="Console"/>, see the Reference Source.
+    /// </summary>
     public static class ConsoleApp
     {
         #region Constructors
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ConsoleApp"/> class.
+        /// </summary>
         static ConsoleApp()
         {
             ConsoleApp.lineInputThread = ConsoleApp.InitializeThread(ref ConsoleApp.getLineInput, ref ConsoleApp.gotLineInput, ConsoleApp.ReadLineOrWait);
@@ -29,6 +36,9 @@ namespace System.Terminal
         #endregion
 
         #region Public Properties
+        /// <summary>
+        /// Gets or sets the background color of the console.
+        /// </summary>
         public static ConsoleColor BackgroundColor
         {
             get
@@ -41,6 +51,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets or sets the foreground color of the console.
+        /// </summary>
         public static ConsoleColor ForegroundColor
         {
             get
@@ -53,6 +66,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets or sets the height of the buffer area.
+        /// </summary>
         public static int BufferHeight
         {
             get
@@ -65,6 +81,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets or sets the width of the buffer area.
+        /// </summary>
         public static int BufferWidth
         {
             get
@@ -77,6 +96,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets a value indicating whether the CAPS LOCK keyboard toggle is turned on or
+        /// </summary>
         public static bool CapsLock
         {
             get
@@ -85,6 +107,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets or sets the height of the cursor within a character cell.
+        /// </summary>
         public static int CursorSize
         {
             get
@@ -97,6 +122,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets or sets the column position of the cursor within the buffer area.
+        /// </summary>
         public static int CursorLeft
         {
             get
@@ -109,6 +137,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets or sets the row position of the cursor within the buffer area.
+        /// </summary>
         public static int CursorTop
         {
             get
@@ -121,11 +152,14 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets or sets the column and row locations of the cursor within the buffer area.
+        /// </summary>
         public static Location CursorLocation
         {
             get
             {
-                return Location.Create(ConsoleApp.CursorLeft, ConsoleApp.CursorTop);
+                return Location.New(ConsoleApp.CursorLeft, ConsoleApp.CursorTop);
             }
             set
             {
@@ -134,6 +168,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets or sets a value indicating if the cursor is visible or not.
+        /// </summary>
         public static bool CursorVisible
         {
             get
@@ -146,6 +183,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets the standard input stream.
+        /// </summary>
         public static TextReader In
         {
             get
@@ -154,6 +194,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets the standard output stream.
+        /// </summary>
         public static TextWriter Out
         {
             get
@@ -162,6 +205,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets the standard error output stream.
+        /// </summary>
         public static TextWriter Error
         {
             get
@@ -170,6 +216,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets or sets the encoding the console uses to read input.
+        /// </summary>
         public static Encoding InputEncoding
         {
             get
@@ -182,6 +231,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets or sets the encoding the console uses to write output.
+        /// </summary>
         public static Encoding OutputEncoding
         {
             get
@@ -192,8 +244,11 @@ namespace System.Terminal
             {
                 Console.OutputEncoding = value;
             }
-        }        
+        }
 
+        /// <summary>
+        /// Gets a value that indicates whether the error output stream has been redirected from the standard error stream.
+        /// </summary>
         public static bool IsErrorRedirected
         {
             get
@@ -202,6 +257,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets a value that indicates whether input has been redirected from the standard input stream.
+        /// </summary>
         public static bool IsInputRedirected
         {
             get
@@ -210,6 +268,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets a value that indicates whether output has been redirected from the standard output stream.
+        /// </summary>
         public static bool IsOutputRedirected
         {
             get
@@ -218,6 +279,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets a value indicating whether a key press is available in the input stream.
+        /// </summary>
         public static bool KeyAvailable
         {
             get
@@ -226,6 +290,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets the largest possible number of console window rows, based on the current font and screen resolution.
+        /// </summary>
         public static int LargestWindowHeight
         {
             get
@@ -234,6 +301,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets the largest possible number of console window columns, based on the current font and screen resolution.
+        /// </summary>
         public static int LargestWindowWidth
         {
             get
@@ -242,6 +312,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets or sets the title to display in the console title bar.
+        /// </summary>
         public static string Title
         {
             get
@@ -265,7 +338,10 @@ namespace System.Terminal
                 Console.TreatControlCAsInput = value;
             }
         }
-        
+
+        /// <summary>
+        /// Gets or sets the leftmost position of the console window area relative to the screen buffer.
+        /// </summary>
         public static int WindowLeft
         {
             get
@@ -278,6 +354,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets or sets the top position of the console window area relative to the screen buffer.
+        /// </summary>
         public static int WindowTop
         {
             get
@@ -290,11 +369,14 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets or sets the location of the console window area relative to the screen buffer.
+        /// </summary>
         public static Location WindowLocation
         {
             get
             {
-                return Location.Create(ConsoleApp.WindowLeft, ConsoleApp.WindowTop);
+                return Location.New(ConsoleApp.WindowLeft, ConsoleApp.WindowTop);
             }
             set
             {
@@ -303,6 +385,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets or sets the width of the console window area.
+        /// </summary>
         public static int WindowWidth
         {
             get
@@ -315,6 +400,9 @@ namespace System.Terminal
             }
         }
 
+        /// <summary>
+        /// Gets or sets the height of the console window area.
+        /// </summary>
         public static int WindowHeight
         {
             get
@@ -326,9 +414,28 @@ namespace System.Terminal
                 Console.WindowHeight = value;
             }
         }
+
+        /// <summary>
+        /// Gets or sets the size of the console window area.
+        /// </summary>
+        public static System.Drawing.Size WindowSize
+        {
+            get
+            {
+                return new Drawing.Size(Console.WindowWidth, Console.WindowHeight);
+            }
+            set
+            {
+                Console.WindowHeight = value.Height;
+                Console.WindowWidth = value.Width;
+            }
+        }
         #endregion
 
         #region Public Events
+        /// <summary>
+        /// The event that is raised when the Cancel key has been pressed.
+        /// </summary>
         public static event ConsoleCancelEventHandler CancelKeyPress;
         #endregion
 
@@ -358,6 +465,10 @@ namespace System.Terminal
             Console.Beep(frequency, duration);
         }
 
+        /// <summary>
+        /// Clears the console buffer and corresponding console window of display information.
+        /// </summary>
+        /// <exception cref="IOException">An I/O error occurred</exception>
         public static void Clear()
         {
             Console.Clear();
@@ -684,6 +795,11 @@ namespace System.Terminal
         #endregion
 
         #region Write Methods & Functions
+        /// <summary>
+        /// Writes the text representation of the specified <see cref="Boolean"/> value to the standard output stream.
+        /// </summary>
+        /// <param name="value">The value to write.</param>
+        /// <exception cref="IOException">An I/O error occurred.</exception>
         public static void Write(bool value)
         {
             Console.Write(value);

@@ -15,6 +15,12 @@ namespace System.Reflection
         #endregion
 
         #region Public Extension Methods & Functions
+        public static T As<T>(this object instance)
+        {
+            if (instance.IsNull())
+                return default(T);
+            return (T) instance;
+        }
         #region PropertyInfo Methods & Functions
         public static bool HasProperty(this Type instanceType, string propertyName)
         {

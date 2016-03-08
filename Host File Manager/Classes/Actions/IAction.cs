@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,6 +13,28 @@ namespace theDiary.Tools.Development.HostFileManager
         public static void ExecuteAction(this IClientAction action, params dynamic[] args)
         {
             action.Execute(action, new ActionEventArgs(action));
+        }
+
+        public static void SetFromAdditional(this ClientActionBase action, object target)
+        {
+            if (!action.HasAdditional)
+                return;
+
+            IEnumerable<PropertyInfo> properties = action.Additional.GetType().GetProperties() as IEnumerable<PropertyInfo>;
+            properties.ForEach(prop =>
+            {
+                PropertyInfo controlProperty;
+                if (target.GetType().TryGetProperty(prop.Name, out controlProperty))
+                {
+                    object value = prop.GetValue(action.Additional, null);
+                    if (value is Delegate)
+                        value = (value as Delegate).DynamicInvoke();
+
+                    controlProperty.SetValue(target, value);
+                }
+                    
+
+            });
         }
 
         public static void ExecuteAction<TDelegate>(this IClientAction<TDelegate> action, params dynamic[] args)

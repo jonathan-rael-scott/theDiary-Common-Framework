@@ -9,6 +9,7 @@ namespace System
 {
     /// <summary>
     /// Helper class used to parse <see cref="String"/> to <see cref="Enum"/> types.
+    /// This class can not be inherited.
     /// </summary>
     public static class EnumHelper
     {

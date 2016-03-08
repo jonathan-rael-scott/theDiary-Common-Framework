@@ -96,15 +96,15 @@ namespace System.Collections.Generic
         /// <param name="source">A sequence of elements.</param>
         /// <param name="action">The <see cref="T:Action"/> delegate to perform on each element of the <see cref="T:IEnumerable"/>.</param>
         /// <exception cref="ArgumentNullException">thrown if the <paramref name="source"/> or <paramref name="action"/> is <c>Null</c>.</exception>
-        public static void ForEach<T>(this IEnumerable<T> items, Action<T> action)
+        public static void ForEach<T>(this IEnumerable<T> source, Action<T> action)
         {
-            if (items.IsNull())
+            if (source.IsNull())
                 throw new ArgumentNullException("source");
 
             if (action.IsNull())
                 throw new ArgumentNullException("action");
 
-            foreach (var item in items)
+            foreach (var item in source)
                 action(item);
         }
 
@@ -115,7 +115,7 @@ namespace System.Collections.Generic
         /// <param name="source">A sequence in which to locate a value.</param>
         /// <param name="predicate">The <see cref="T:Predicate"/> used to match the element.</param>
         /// <returns><c>True</c> if the sequence contains a match; otherwise <c>False</c>.</returns>
-        /// <exception cref="ArgumentNulLException">thrown if the <paramref name="source"/> or <paramref name="predicate"/> is <c>Null</c>.</exception>
+        /// <exception cref="ArgumentNullException">thrown if the <paramref name="source"/> or <paramref name="predicate"/> is <c>Null</c>.</exception>
         public static bool Contains<TSource>(this IEnumerable<TSource> source, Predicate<TSource> predicate)
         {
             return source.Contains(predicate, true);
@@ -129,7 +129,7 @@ namespace System.Collections.Generic
         /// <param name="predicate">The <see cref="T:Predicate"/> used to match the element.</param>
         /// <param name="asParallel">Value indicating if the <paramref name="source"/> should be checked in parallel query.</param>
         /// <returns><c>True</c> if the sequence contains a match; otherwise <c>False</c>.</returns>
-        /// <exception cref="ArgumentNulLException">thrown if the <paramref name="source"/> or <paramref name="predicate"/> is <c>Null</c>.</exception>
+        /// <exception cref="ArgumentNullException">thrown if the <paramref name="source"/> or <paramref name="predicate"/> is <c>Null</c>.</exception>
         public static bool Contains<TSource>(this IEnumerable<TSource> source, Predicate<TSource> predicate, bool asParallel)
         {
             if (source.IsNull())
@@ -152,16 +152,16 @@ namespace System.Collections.Generic
         /// <param name="items">The sequence of items to search.</param>
         /// <param name="match">The <see cref="T:Predicate"/> delegate that defines the conditions of the element to search for.</param>
         /// <returns>The zero-based index of the first occurrence of an element that matches the conditions defined by match, if found; otherwise, –1.</returns>
-        public static int FindIndex<T>(this IList<T> source, Predicate<T> match)
+        public static int FindIndex<T>(this IList<T> items, Predicate<T> match)
         {
-            if (source.IsNull())
+            if (items.IsNull())
                 throw new ArgumentNullException("source");
 
             if (match.IsNull())
                 throw new ArgumentNullException("match");
 
-            for (int index = 0; index < source.Count; index++)
-                if (match(source[index]))
+            for (int index = 0; index < items.Count; index++)
+                if (match(items[index]))
                     return index;
 
             return -1;
@@ -171,19 +171,19 @@ namespace System.Collections.Generic
         /// Searches for an element that matches the conditions defined by the specified predicate, and returns the zero-based index of the first occurrence within the entire <see cref="T:List"/>.
         /// </summary>
         /// <typeparam name="T">The <see cref="Type"/> of the <see cref="T:IList"/>.</typeparam>
-        /// <param name="source">The sequence of items to search.</param>
+        /// <param name="items">The sequence of items to search.</param>
         /// <param name="match">The <see cref="T:Predicate"/> delegate that defines the conditions of the element to search for.</param>
         /// <param name="index">The zero-based index of the first occurrence of an element that matches the conditions defined by match, if found; otherwise, –1.</param>
-        /// <returns><c>True</c> if the <paramref name="source"/> conditions defined by the <paramref name="match"/> where met; otherwise <c>False</c>.</returns>
-        public static bool TryFindIndex<T>(this IList<T> source, Predicate<T> match, out int index)
+        /// <returns><c>True</c> if the <paramref name="items"/> conditions defined by the <paramref name="match"/> where met; otherwise <c>False</c>.</returns>
+        public static bool TryFindIndex<T>(this IList<T> items, Predicate<T> match, out int index)
         {
-            if (source.IsNull())
+            if (items.IsNull())
                 throw new ArgumentNullException("source");
 
             if (match.IsNull())
                 throw new ArgumentNullException("match");
 
-            index = source.FindIndex(match);
+            index = items.FindIndex(match);
 
             return (index != -1);
         }

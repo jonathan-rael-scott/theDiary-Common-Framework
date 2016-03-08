@@ -74,6 +74,7 @@ namespace theDiary.Tools.Development.HostFileManager
             }
         }
         #endregion
+
         public void Add(IActionExecutor item)
         {
             this.actions.Add(this.GetActionName(item.GetType(), item.ActionName), item);
@@ -103,9 +104,7 @@ namespace theDiary.Tools.Development.HostFileManager
 
             return action;
         }
-
-        
-        
+       
         public void Clear()
         {
             this.actions.Clear();
@@ -114,11 +113,6 @@ namespace theDiary.Tools.Development.HostFileManager
         public bool Contains(IActionExecutor item)
         {
             return this.actions.ContainsKey(item.ActionName);
-        }
-
-        void ICollection<IActionExecutor>.CopyTo(IActionExecutor[] array, int arrayIndex)
-        {
-
         }
 
         public int IndexOf(IActionExecutor action)
@@ -131,15 +125,7 @@ namespace theDiary.Tools.Development.HostFileManager
                 index++;
             }
             return -1;
-        }
-
-        bool ICollection<IActionExecutor>.IsReadOnly
-        {
-            get
-            {
-                return false;
-            }
-        }
+        }        
 
         public bool Remove(IActionExecutor item)
         {
@@ -149,34 +135,15 @@ namespace theDiary.Tools.Development.HostFileManager
         public IEnumerator<IActionExecutor> GetEnumerator()
         {
             return this.actions.Values.GetEnumerator();
-        }
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return this.actions.Values.GetEnumerator();
-        }
-
-        void IList<IActionExecutor>.Insert(int index, IActionExecutor item)
-        {
-        }
-
-        void IList<IActionExecutor>.RemoveAt(int index)
-        {
-        }
+        }        
 
         public IEnumerable<T> Select<T>()
             where T : IActionExecutor
         {
             return this.actions.Values.Where(action => action is T).Cast<T>();
         }
-
-        public void Process<T>(Action<T> processDelegate)
-            where T : IActionExecutor
-        {
-            foreach (T action in this.Select<T>())
-                processDelegate(action);
-        }
-
+                
+        #region Processor Registration Methods & Functions
         public void RegisterProcessor<T>(Action<T> processDelegate)
             where T : IActionExecutor
         {
@@ -200,11 +167,22 @@ namespace theDiary.Tools.Development.HostFileManager
             if (!this.actionProcessors.ContainsKey(typeof(T)))
                 this.actionProcessors.Add(typeof(T), processDelegate);
         }
+        #endregion Processor Registration Methods & Functions
+
+        #region Process Methods & Functions
+        public void Process<T>(Action<T> processDelegate)
+            where T : IActionExecutor
+        {
+            foreach (T action in this.Select<T>())
+                processDelegate(action);
+        }
+
         public void Process<T, TGroupBy>()
                 where T : IClientActionGroup
         {
             this.Process<T, TGroupBy>(null);
         }
+
         public void Process<T, TGroupBy>(object[] args, params object[] groupByArgs)
             where T : IClientActionGroup
         {
@@ -233,6 +211,35 @@ namespace theDiary.Tools.Development.HostFileManager
             this.RegisterProcessor<T>(processDelegate);
             this.Process<T>(args);
         }
+        #endregion
+
+        #region IList Methods Functions
+        bool ICollection<IActionExecutor>.IsReadOnly
+        {
+            get
+            {
+                return false;
+            }
+        }
+
+        void ICollection<IActionExecutor>.CopyTo(IActionExecutor[] array, int arrayIndex)
+        {
+
+        }
+
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return this.actions.Values.GetEnumerator();
+        }
+
+        void IList<IActionExecutor>.Insert(int index, IActionExecutor item)
+        {
+        }
+
+        void IList<IActionExecutor>.RemoveAt(int index)
+        {
+        }
+        #endregion IList Methods & Functions
 
         private string GetActionName(Type type, string actionName)
         {
@@ -249,5 +256,7 @@ namespace theDiary.Tools.Development.HostFileManager
 
             return returnValue.ToArray();
         }
+
+
     }
 }

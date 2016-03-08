@@ -45,6 +45,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Linq.Dynamic">
       <HintPath>..\..\..\..\Kopano\Kopano\packages\System.Linq.Dynamic.1.0.0\lib\net40\System.Linq.Dynamic.dll</HintPath>
     </Reference>
@@ -78,6 +79,9 @@
     <Compile Include="Diagnostics\Extensions.Process.cs" />
     <Compile Include="Extensions.Object.cs" />
     <Compile Include="IO\Extensions.Stream.cs" />
+    <Compile Include="IO\FileEventHandler.cs" />
+    <Compile Include="IO\FileEventArgs.cs" />
+    <Compile Include="IO\FileEvent.cs" />
     <Compile Include="IO\MimeTypeHelper.cs" />
     <Compile Include="Net\IPAddressRange.cs" />
     <Compile Include="Percentage.cs" />
@@ -94,11 +98,14 @@
     <Compile Include="Security\SecurityExtensions.cs" />
     <Compile Include="Security\Principal\TokenElevationType.cs" />
     <Compile Include="Security\Principal\TokenInformationClasses.cs" />
+    <Compile Include="Windows\Forms\ApplicationElevationRequirement.cs" />
+    <Compile Include="Windows\Forms\ElevationRequestResult.cs" />
     <Compile Include="Security\UAC\UACHelper.cs" />
     <Compile Include="Terminal\Animations\ConsoleSpiner.cs" />
     <Compile Include="Terminal\Animations\IConsoleAnimation.cs" />
     <Compile Include="Terminal\ConsoleApp.cs" />
     <Compile Include="Terminal\Location.cs" />
+    <Compile Include="Windows\Forms\ElevatedApplication.cs" />
     <Compile Include="Xml\Linq\Extensions.Xml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Runtime\Serialization\IBinarySerializable.cs" />

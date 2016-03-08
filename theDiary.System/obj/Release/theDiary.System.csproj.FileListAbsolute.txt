@@ -6,3 +6,4 @@ C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.System\bin\R
 C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.System\bin\Release\theDiary.System.pdb
 C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.System\obj\Release\theDiary.System.dll
 C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.System\obj\Release\theDiary.System.pdb
+C:\Development\DotNot\Projects\theDiary Software\Framework\theDiary.System\obj\Release\theDiary.System.csprojResolveAssemblyReference.cache

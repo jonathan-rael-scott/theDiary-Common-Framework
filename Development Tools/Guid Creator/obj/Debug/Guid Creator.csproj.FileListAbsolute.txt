@@ -6,3 +6,12 @@ C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\co
 C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Guid Creator\obj\Debug\Guid Creator.csproj.GenerateResource.Cache
 C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Guid Creator\obj\Debug\Guid Creator.exe
 C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Guid Creator\obj\Debug\Guid Creator.pdb
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Guid Creator\bin\Debug\Guid Creator.exe.config
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Guid Creator\bin\Debug\Guid Creator.exe
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Guid Creator\bin\Debug\Guid Creator.pdb
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Guid Creator\obj\Debug\Guid Creator.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Guid Creator\obj\Debug\Guid_Creator.Form1.resources
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Guid Creator\obj\Debug\Guid_Creator.Properties.Resources.resources
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Guid Creator\obj\Debug\Guid Creator.csproj.GenerateResource.Cache
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Guid Creator\obj\Debug\Guid Creator.exe
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Guid Creator\obj\Debug\Guid Creator.pdb

@@ -33,6 +33,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.currentStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.entriesAreDirty = new System.Windows.Forms.ToolStripStatusLabel();
+            this.entryCount = new System.Windows.Forms.ToolStripStatusLabel();
+            this.disabledEntryCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
@@ -68,12 +70,14 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.toolStripActions = new System.Windows.Forms.ToolStrip();
             this.viewContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupByToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.noneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripActions = new System.Windows.Forms.ToolStrip();
+            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.toolStripContextMenu.SuspendLayout();
@@ -87,7 +91,9 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.currentStatus,
-            this.entriesAreDirty});
+            this.entriesAreDirty,
+            this.entryCount,
+            this.disabledEntryCount});
             this.statusStrip1.Location = new System.Drawing.Point(0, 282);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(635, 22);
@@ -97,7 +103,7 @@
             // currentStatus
             // 
             this.currentStatus.Name = "currentStatus";
-            this.currentStatus.Size = new System.Drawing.Size(620, 17);
+            this.currentStatus.Size = new System.Drawing.Size(518, 17);
             this.currentStatus.Spring = true;
             this.currentStatus.Text = "toolStripStatusLabel1";
             this.currentStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -106,6 +112,18 @@
             // 
             this.entriesAreDirty.Name = "entriesAreDirty";
             this.entriesAreDirty.Size = new System.Drawing.Size(0, 17);
+            // 
+            // entryCount
+            // 
+            this.entryCount.Name = "entryCount";
+            this.entryCount.Size = new System.Drawing.Size(51, 17);
+            this.entryCount.Text = "0 Entries";
+            // 
+            // disabledEntryCount
+            // 
+            this.disabledEntryCount.Name = "disabledEntryCount";
+            this.disabledEntryCount.Size = new System.Drawing.Size(51, 17);
+            this.disabledEntryCount.Text = "0 Entries";
             // 
             // menuStrip1
             // 
@@ -117,6 +135,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.menuStrip1.Size = new System.Drawing.Size(635, 24);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
@@ -124,6 +143,8 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saveToolStripMenuItem,
+            this.saveAsToolStripMenuItem,
             this.toolStripMenuItem4,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -138,7 +159,8 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
+            this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "E&xit...";
             // 
             // editToolStripMenuItem
@@ -156,7 +178,7 @@
             // 
             this.autoMinimizeToolStripMenuItem.CheckOnClick = true;
             this.autoMinimizeToolStripMenuItem.Name = "autoMinimizeToolStripMenuItem";
-            this.autoMinimizeToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.autoMinimizeToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.autoMinimizeToolStripMenuItem.Tag = "MinimizeAfterRun";
             this.autoMinimizeToolStripMenuItem.Text = "&Auto Minimize...";
             this.autoMinimizeToolStripMenuItem.Click += new System.EventHandler(this.SetConfigurationChanged);
@@ -165,8 +187,8 @@
             // 
             this.minimizeToTrayToolStripMenuItem.CheckOnClick = true;
             this.minimizeToTrayToolStripMenuItem.Name = "minimizeToTrayToolStripMenuItem";
-            this.minimizeToTrayToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
-            this.minimizeToTrayToolStripMenuItem.Tag = "MinimizeToTray";
+            this.minimizeToTrayToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.minimizeToTrayToolStripMenuItem.Tag = "MinimizeToTaskbar";
             this.minimizeToTrayToolStripMenuItem.Text = "&Minimize to Tray...";
             this.minimizeToTrayToolStripMenuItem.Click += new System.EventHandler(this.SetConfigurationChanged);
             // 
@@ -174,7 +196,7 @@
             // 
             this.alwaysOnTopToolStripMenuItem.CheckOnClick = true;
             this.alwaysOnTopToolStripMenuItem.Name = "alwaysOnTopToolStripMenuItem";
-            this.alwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.alwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.alwaysOnTopToolStripMenuItem.Tag = "AlwaysOnTop";
             this.alwaysOnTopToolStripMenuItem.Text = "Always on &Top...";
             this.alwaysOnTopToolStripMenuItem.Click += new System.EventHandler(this.SetConfigurationChanged);
@@ -309,18 +331,9 @@
             // 
             // hostEntryLargeIcons
             // 
-            this.hostEntryLargeIcons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("hostEntryLargeIcons.ImageStream")));
+            this.hostEntryLargeIcons.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.hostEntryLargeIcons.ImageSize = new System.Drawing.Size(48, 48);
             this.hostEntryLargeIcons.TransparentColor = System.Drawing.Color.Transparent;
-            this.hostEntryLargeIcons.Images.SetKeyName(0, "Disabled_Medium.png");
-            this.hostEntryLargeIcons.Images.SetKeyName(1, "Enabled_Medium.png");
-            this.hostEntryLargeIcons.Images.SetKeyName(2, "Add_Medium.png");
-            this.hostEntryLargeIcons.Images.SetKeyName(3, "Edit_Medium.png");
-            this.hostEntryLargeIcons.Images.SetKeyName(4, "Delete_Medium.png");
-            this.hostEntryLargeIcons.Images.SetKeyName(5, "Disable_Medium.png");
-            this.hostEntryLargeIcons.Images.SetKeyName(6, "Enable_Medium.png");
-            this.hostEntryLargeIcons.Images.SetKeyName(7, "Find_Medium.png");
-            this.hostEntryLargeIcons.Images.SetKeyName(8, "Refresh_Medium.png");
-            this.hostEntryLargeIcons.Images.SetKeyName(9, "Save_Medium.png");
             // 
             // toolStripContextMenu
             // 
@@ -424,17 +437,6 @@
             // 
             this.columnHeader4.Text = "Description";
             // 
-            // toolStripActions
-            // 
-            this.toolStripActions.ContextMenuStrip = this.toolStripContextMenu;
-            this.toolStripActions.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStripActions.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
-            this.toolStripActions.Location = new System.Drawing.Point(4, 0);
-            this.toolStripActions.Name = "toolStripActions";
-            this.toolStripActions.Size = new System.Drawing.Size(1, 0);
-            this.toolStripActions.TabIndex = 11;
-            this.toolStripActions.Text = "toolStrip1";
-            // 
             // viewContextMenu
             // 
             this.viewContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -453,21 +455,47 @@
             this.groupByToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.groupByToolStripMenuItem.Text = "Group By...";
             // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
-            // 
             // noneToolStripMenuItem
             // 
             this.noneToolStripMenuItem.Name = "noneToolStripMenuItem";
-            this.noneToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.noneToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.noneToolStripMenuItem.Text = "&None";
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(100, 6);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(129, 6);
+            // 
+            // toolStripActions
+            // 
+            this.toolStripActions.ContextMenuStrip = this.toolStripContextMenu;
+            this.toolStripActions.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStripActions.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Flow;
+            this.toolStripActions.Location = new System.Drawing.Point(4, 0);
+            this.toolStripActions.Name = "toolStripActions";
+            this.toolStripActions.Size = new System.Drawing.Size(1, 0);
+            this.toolStripActions.TabIndex = 11;
+            this.toolStripActions.Text = "toolStrip1";
+            // 
+            // saveAsToolStripMenuItem
+            // 
+            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveAsToolStripMenuItem.Text = "&Save As...";
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripMenuItem.Image")));
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.ShortcutKeyDisplayString = "";
+            this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveToolStripMenuItem.Text = "&Save";
             // 
             // MainForm
             // 
@@ -477,8 +505,9 @@
             this.Controls.Add(this.toolStripContainer1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.statusStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.Text = "Iterative Host File Manager";
+            this.Text = "Host File Manager";
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
@@ -542,6 +571,10 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem noneToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripStatusLabel entryCount;
+        private System.Windows.Forms.ToolStripStatusLabel disabledEntryCount;
+        private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
     }
 }
 

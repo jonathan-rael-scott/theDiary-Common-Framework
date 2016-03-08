@@ -20,3 +20,10 @@ C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\co
 C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Release Tools\bin\Debug\Seth.System.pdb
 C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Release Tools\obj\Debug\Release Tools.exe
 C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Development Tools\Release Tools\obj\Debug\Release Tools.pdb
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Release Tools\bin\Debug\Release Tools.exe.config
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Release Tools\bin\Debug\Release Tools.exe
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Release Tools\bin\Debug\Release Tools.pdb
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Release Tools\bin\Debug\theDiary.System.dll
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Release Tools\bin\Debug\theDiary.System.pdb
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Release Tools\obj\Debug\Release Tools.exe
+C:\Development\DotNot\Projects\theDiary Software\Framework\Development Tools\Release Tools\obj\Debug\Release Tools.pdb

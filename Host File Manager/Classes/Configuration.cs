@@ -9,54 +9,31 @@ namespace theDiary.Tools.Development.HostFileManager
         : Singleton<Configuration>, System.ComponentModel.INotifyPropertyChanged
 
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Configuration"/> class.
+        /// </summary>
         public  Configuration()
             : base()
         {
         }
 
-        private static readonly Configuration configuration = new Configuration();
-
-        internal static Configuration Instance
-        {
-            get
-            {
-                return configuration;
-            }
-        }
 
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 
-        public bool MinimizeAfterRun
+        public bool MinimizeToTaskbar
         {
             get
             {
-                return ConfigurationHelper.ReadConfiguration("MinimizeAfterRun");
+                return ConfigurationHelper.ReadConfiguration("MinimizeToTaskbar");
             }
             set
             {
-                if (this.MinimizeAfterRun == value)
+                if (this.MinimizeToTaskbar == value)
                     return;
 
-                ConfigurationHelper.SaveConfiguration("MinimizeAfterRun", value);
+                ConfigurationHelper.SaveConfiguration("MinimizeToTaskbar", value);
                 if (this.PropertyChanged != null)
-                    this.PropertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs("MinimizeAfterRun"));
-            }
-        }
-
-        public bool MinimizeToTray
-        {
-            get
-            {
-                return ConfigurationHelper.ReadConfiguration("MinimizeToTray");
-            }
-            set
-            {
-                if (this.MinimizeToTray == value)
-                    return;
-
-                ConfigurationHelper.SaveConfiguration("MinimizeToTray", value);
-                if (this.PropertyChanged != null)
-                    this.PropertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs("MinimizeToTray"));
+                    this.PropertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs("MinimizeToTaskbar"));
             }
         }
 
@@ -105,6 +82,37 @@ namespace theDiary.Tools.Development.HostFileManager
                 ConfigurationHelper.SaveConfiguration("CurrentItemsView", value.ToString());
                 if (this.PropertyChanged != null)
                     this.PropertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs("CurrentItemsView"));
+            }
+        }
+        public bool ConfirmWhenExiting
+        {
+            get
+            {
+                return ConfigurationHelper.ReadConfiguration("ConfirmWhenExiting");
+            }
+            set
+            {
+                if (this.ShowStatusbar == value)
+                    return;
+                ConfigurationHelper.SaveConfiguration("ConfirmWhenExiting", value);
+                if (this.PropertyChanged != null)
+                    this.PropertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs("ConfirmWhenExiting"));
+            }
+        }
+
+        public bool AutoSave
+        {
+            get
+            {
+                return ConfigurationHelper.ReadConfiguration("AutoSave");
+            }
+            set
+            {
+                if (this.ShowStatusbar == value)
+                    return;
+                ConfigurationHelper.SaveConfiguration("AutoSave", value);
+                if (this.PropertyChanged != null)
+                    this.PropertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs("AutoSave"));
             }
         }
 

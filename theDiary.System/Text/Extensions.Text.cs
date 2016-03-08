@@ -8,27 +8,21 @@ using System.Threading.Tasks;
 namespace System.Text
 {
     /// <summary>
-    /// Provides extenion methods & Functions used in Text and <see cref="String"/> manipulation.
+    /// Provides extension methods and functions used in Text and <see cref="String"/> manipulation.
     /// </summary>
     public static class TextExtensions
     {
-        private static readonly char WhiteSpace = ' ';
-
-        public static bool IsNumber(this string value)
-        {
-            if (string.IsNullOrWhiteSpace(value))
-                return false;
-
-            double val;
-            return double.TryParse(value, out val);
-        }
-
+        #region Private Constant Declarations
+        private const char WhiteSpace = ' ';
         private static readonly Regex readableRegEx = new Regex(@"(\S)([A-Z]+|(\d+)(?![A-Z_\-\.]|\b|\s)|[_\-\.]+)", RegexOptions.Compiled);
         private static readonly Regex readableRemovedRegEx = new Regex(@"[_\-\.]+");
         private static readonly Regex readableRegEx2 = new Regex(@"(\S)([A-Z]+|(\d+)(?![A-Z_\-\.]|\b|\s)|[_\-\.]+)", RegexOptions.Compiled);
         private static readonly Regex readableRemovedRegEx2 = new Regex(@"[_\-\.]+");
         private static readonly Func<Group, string> replace = (g) => readableRemovedRegEx.Replace(g.Value, string.Empty);
         private static readonly Func<Group, string> replace2 = (g) => readableRemovedRegEx2.Replace(g.Value, string.Empty);
+        #endregion Private Constant Declarations
+
+        #region Public Methods & Functions
 
         //public static string AsReadable6(this string text)
         //{
@@ -69,6 +63,26 @@ namespace System.Text
         //    return readableRegEx2.Replace(text, (m) => string.Format("{0} {1}", replace2(m.Groups[1]), replace2(m.Groups[2])));
         //}
 
+        /// <summary>
+        /// Determines if the <paramref name="value"/> is numeric in its content.
+        /// </summary>
+        /// <param name="value">The value to check.</param>
+        /// <returns><c>True</c> if the value is numeric; otherwise <c>False</c>.</returns>
+        public static bool IsNumber(this string value)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                return false;
+
+            double val;
+            return double.TryParse(value, out val);
+        }
+
+        /// <summary>
+        /// Attempts to make the specified <see cref="String"/> <paramref name="value"/> human readable.
+        /// </summary>
+        /// <param name="value">The <see cref="String"/> to make readable.</param>
+        /// <param name="normalizeConditions">A bitwise combination of <see cref="ReadablilityCondition"/> used to specify how readability is determined.</param>
+        /// <returns>A human readable <see cref="string"/>.</returns>
         public static string AsReadable(this string value, ReadablilityCondition normalizeConditions = ReadablilityCondition.Default)
         {
             if (value.IsNullEmptyOrWhiteSpace())
@@ -103,11 +117,12 @@ namespace System.Text
                 hasValue = iterator.MoveNext();
                 isFirst = false;
                 if (hasValue)
-                    returnValue.Append(TextExtensions.WhiteSpace);                
+                    returnValue.Append(TextExtensions.WhiteSpace);
             }
 
             return returnValue;
         }
+        #endregion Public Methods & Functions
 
         #region Private Static Methods & Functions
         private static IEnumerable<string> SeperateForReadability(this string value, ReadablilityCondition conditions)
@@ -315,7 +330,6 @@ namespace System.Text
             @char = value[index - 1];
             return true;
         }
-        #endregion
 
         private static bool InsertLeadingWhiteSpace(this Char[] value, int index)
         {
@@ -337,6 +351,8 @@ namespace System.Text
 
             return false;
         }
+
+        #endregion  Private Static Methods & Functions
     }
 
 }

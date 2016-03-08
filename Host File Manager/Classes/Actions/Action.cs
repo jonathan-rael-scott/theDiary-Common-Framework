@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,7 +34,21 @@ namespace theDiary.Tools.Development.HostFileManager
         
         public ActionEventHandler Execute { get; private set; }
 
-        public string ActionName { get; private set; }
+        public string ActionName { get; private set;
+        }
+
+        protected internal dynamic Additional { get; set; }
+
+        protected internal bool HasAdditional
+
+        {
+            get
+            {
+                return this.Additional != null;
+            }
+        }
+
+        
     }
     
     public abstract class ClientActionGroupBase<T>

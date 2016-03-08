@@ -17,51 +17,55 @@ namespace theDiary.Tools.Development.HostFileManager.Controls
         public HostEntryControl()
         {
             InitializeComponent();
-            this.ipAddress.IPAddressChanged += (s, e) =>
+            EventHandler validateOkButton = (s, e) =>
             {
                 this.ValidateOkButton(!this.ipAddress.IsEmpty);
-            };
-
-            this.hostName.TextChanged += (s, e) =>
-            {
                 this.ValidateOkButton(!string.IsNullOrWhiteSpace(this.hostName.Text));
             };
+            this.ipAddress.IPAddressChanged += validateOkButton;
+            this.hostName.TextChanged += validateOkButton;
+            this.description.TextChanged += validateOkButton;
+            this.enabled.CheckedChanged += validateOkButton;
 
-            this.dialogClosingDelegate = new FormClosingEventHandler(delegate(object sender, FormClosingEventArgs e)
+            this.dialogClosingDelegate = new FormClosingEventHandler(delegate (object sender, FormClosingEventArgs e)
             {
                 if (((sender as Form).DialogResult != System.Windows.Forms.DialogResult.OK))
                     return;
-
                 if (MessageBox.Show(this, "Do you want to save the Host Entry?", "Save Host Entry?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
-                {
-                    HostsFileHelper.SetEntry(new HostEntry(this.Destination, this.IPAddress, this.Description));
-                }
-                else
-                {
-                    this.SelectedItem = null;
-                }
+                    HostsFileHelper.SetEntry(this.SelectedItem);
             });
-            this.Title = "Add Host Entry...";
-            this.enabledPanel.Visible = false;
+
+
+            this.Load += (s, e) =>
+            {
+                this.enabledPanel.Visible = !this.SelectedItem.IsNew;
+                this.Title = this.SelectedItem.IsNew ? "Add Host Entry..." : "Edit Host Entry...";
+
+                this.ipAddress.DataBindings.Add(new Binding("Value", this.SelectedItem, "IPAddress"));
+                this.description.DataBindings.Add(new Binding("Text", this.SelectedItem, "Description"));
+                this.hostName.DataBindings.Add(new Binding("Text", this.SelectedItem, "Destination"));
+                this.enabled.DataBindings.Add(new Binding("Checked", this.SelectedItem, "Enabled"));
+            };
+
         }
 
         public HostEntryControl(HostEntry hostEntry)
             : this()
         {
             if (hostEntry == null)
-                return;
-            this.Description = hostEntry.Description;
-            this.IPAddress = hostEntry.IPAddress;
-            this.Active = hostEntry.Enabled;
-            this.Destination = hostEntry.Destination;
+                throw new ArgumentNullException(nameof(hostEntry));
+
+            //this.Description = hostEntry.Description;
+            //this.IPAddress = hostEntry.IPAddress;
+            //this.Active = hostEntry.Enabled;
+            //this.Destination = hostEntry.Destination;
             this.SelectedItem = hostEntry;
-            this.Title = "Edit Host Entry...";
-            this.enabledPanel.Visible = true;
         }
         #endregion
 
         #region Private Declarations
         private FormClosingEventHandler dialogClosingDelegate;
+        private HostEntry selectedItem;
         #endregion
 
         #region Public Events
@@ -71,8 +75,24 @@ namespace theDiary.Tools.Development.HostFileManager.Controls
         #endregion
 
         #region Public Properties
-        public HostEntry SelectedItem { get; private set; }
-        
+
+        public HostEntry SelectedItem
+        {
+            get
+            {
+                if (this.selectedItem == null)
+                    this.selectedItem = new HostEntry();
+                return this.selectedItem;
+            }
+            private set
+            {
+                if (this.selectedItem == value)
+                    return;
+
+                this.selectedItem = value;
+            }
+        }
+
         public string Destination
         {
             get
@@ -130,7 +150,10 @@ namespace theDiary.Tools.Development.HostFileManager.Controls
             }
         }
 
-        public string Title { get; private set; }
+        public string Title
+        {
+            get; private set;
+        }
         #endregion
 
         #region Private Methods & Functions

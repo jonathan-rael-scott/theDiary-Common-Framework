@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,17 +20,22 @@ namespace theDiary.Tools.Development.HostFileManager
             this.lastWindowState = this.WindowState;
             HostsFileHelper.IsDirtyHandler += (s, e) =>
             {
-                this.entriesAreDirty.Text = HostsFileHelper.IsDirty ? "Dirty" : string.Empty;
+                if (Configuration.Instance.AutoSave)
+                {
+                    HostsFileHelper.SaveHostEntries();
+                }
+                else
+                {
+                    this.entriesAreDirty.Text = HostsFileHelper.IsDirty ? "Dirty" : string.Empty;
+                }
             };
 
             this.FormClosing += (sender, e) =>
             {
-                if (e.CloseReason == CloseReason.UserClosing || e.CloseReason == CloseReason.ApplicationExitCall)
-                {
+                if (Configuration.Instance.ConfirmWhenExiting && (e.CloseReason == CloseReason.UserClosing || e.CloseReason == CloseReason.ApplicationExitCall))
                     e.Cancel = MessageBox.Show(this, "Are you sure want to Exit?", "Exit Host File Manager", MessageBoxButtons.YesNo) != System.Windows.Forms.DialogResult.Yes;
-                    if (!e.Cancel && HostsFileHelper.IsDirty && MessageBox.Show(this, "Do you want to save the host file entries?", "Save changes?", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
-                        HostsFileHelper.SaveHostEntries();
-                }
+                if (!e.Cancel && HostsFileHelper.IsDirty && MessageBox.Show(this, "Do you want to save the host file entries?", "Save changes?", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+                    HostsFileHelper.SaveHostEntries();
             };
 
             this.Load += (sender, e) =>
@@ -41,18 +47,52 @@ namespace theDiary.Tools.Development.HostFileManager
             };
             this.exitToolStripMenuItem.Click += (s, e) => Application.Exit();
 
-            this.actions.Add(new ViewAction("ViewDoubleClick", "DoubleClick", (s, e) => this.EditHostEntry(this.selectedItem)));
+            
+
+
+            this.InitializeListViewActions();
+            this.InitializeToolstripActions();
+            this.InitializeMenuActions();
+
+
+
+            this.Load += (s, e) =>
+            {
+
+            };
+            this.Shown += (s, e) =>
+            {
+                this.actions.Process<ToolstripButtonAction<HostEntry>, ToolStrip>();
+                this.actions.Process<ToolstripButtonStateAction<HostEntry>, ToolStrip>();
+                this.actions.Process<MenuItemAction>();
+                this.actions.Process<ViewAction>();
+                this.RefreshHostEntries();
+            };
+        }
+
+        #region Private Declarations
+        private FormWindowState lastWindowState;
+        private ActionContainer actions = new ActionContainer();
+        #endregion
+
+        #region Event Declarations
+        public event EventHandler WindowStateChanged;
+
+        public event SelectedItemChangedEventHandler<HostEntry> SelectedItemChanged;
+        #endregion
+
+        private void InitializeMenuActions()
+        {
             this.actions.Add(new MenuItemAction("File", "Refresh", (s, e) => this.RefreshHostEntries()));
-            this.actions.Add(new ToolstripButtonAction<HostEntry>("Host Entry", "AddHostEntry", this.AddHostEntry, 2, "Add"));
-            this.actions.Add(new ToolstripButtonStateAction<HostEntry>("Host Entry", "EditHostEntry", this.EditHostEntry, 3, "Edit", (s, e) => this.SelectedItem != null, (s, e) => e.State != null));
-            this.actions.Add(new ToolstripButtonStateAction<HostEntry>("Host Entry", "DeleteHostEntry", this.DeleteHostEntry, 4, "Delete", (s, e) => this.SelectedItem != null, (s, e) => e.State != null));
-            this.actions.Add(new ToolstripButtonStateAction<HostEntry>("Host Entry", "DisableHostEntry", this.EnableDisableHostEntry, (s, e) => e.State == null || e.State.Enabled ? 5 : 6, (s, e) => e.State == null || e.State.Enabled ? "Disable" : "Enable", null, (s, e) => this.SelectedItem != null, (s, e) => e.State != null));
+            this.actions.Add(new MenuItemAction("File", "Options", (s, e) =>
+            {
+                this.OpenFormDialog<DialogForm>(new DialogForm(new Controls.OptionsControl()));
+            }, new 
+            {
+                Image = Resources._16x16.Configure,
+            }
+            ));
 
-            this.actions.Add(new ToolstripButtonAction<HostEntry>("Common", "Refresh", (s, e) => this.RefreshHostEntries(), 8, "Refresh"));
-            this.actions.Add(new ToolstripButtonStateAction<HostEntry>("Common", "Save", (s, e) => HostsFileHelper.SaveHostEntries(), 9, "Save", (s, e) => HostsFileHelper.IsDirty));
-            this.actions.Add(new ToolstripButtonAction<HostEntry>("Common", "Search", SearchHostEntries, 7, "Search"));
-
-            this.actions.RegisterProcessor<ViewAction>(action => action.AttachAction(this.hostEntryList));
             this.actions.RegisterProcessor<MenuItemAction>(action =>
             {
                 ToolStripMenuItem item = new ToolStripMenuItem();
@@ -67,7 +107,71 @@ namespace theDiary.Tools.Development.HostFileManager
                     parent.DropDownItems.Insert(0, item);
                 }
             });
+        }
+        private void InitializeListViewActions()
+        {
+            if (ElevatedApplication.IsElevated)
+                this.actions.Add(new ViewAction("ViewDoubleClick", "DoubleClick", (s, e) =>
+                {
+                    if (this.SelectedItem.IsNotNull())
+                        this.EditHostEntry(this.SelectedItem);
+                }));
+            this.actions.RegisterProcessor<ViewAction>(action => action.AttachAction(this.hostEntryList));
+        }
 
+        private void InitializeToolstripActions()
+        {
+
+
+            this.actions.Add(new ToolstripButtonAction<HostEntry>("Host Entry", "AddHostEntry", this.AddHostEntry, new {
+                ImageKey = "NewHost",
+                ToolTipText = "Add a new Host entry.",
+                Text = "Add"
+            }));
+            this.actions.Add(new ToolstripButtonAction<HostEntry>("Host Entry", "EditHostEntry",
+                this.EditHostEntry, new {
+                    ImageKey = "EditHost",
+                    Text = "Edit",
+                    Enabled = new Func<bool>(() => this.SelectedItem.IsNotNull()),
+                    Visible = new Func<bool>(() => this.SelectedItem.IsNotNull())
+                    }));
+
+            this.actions.Add(new ToolstripButtonAction<HostEntry>("Host Entry", "DeleteHostEntry",
+                this.DeleteHostEntry, new
+                {
+                    ImageKey = "DeleteHost",
+                    Text = "Delete",
+                    Visible = new Func<bool>(() => this.SelectedItem.IsNotNull()),
+                    Enabled = new Func<bool>(() => this.SelectedItem.IsNotNull()),
+                }));
+            this.actions.Add(new ToolstripButtonAction<HostEntry>("Host Entry", "DisableHostEntry",
+                this.EnableDisableHostEntry, new
+                {
+                    ImageKey = new Func<string>(() => this.SelectedItem.IsNull() || this.SelectedItem.Enabled ? "DisableHost" : "EnableHost"),
+                    Text = new Func<string>(() => this.SelectedItem.IsNull() || this.SelectedItem.Enabled ? "Disable" : "Enable"),
+
+                }));
+
+            this.actions.Add(new ToolstripButtonAction<HostEntry>("Common", "Refresh", (s, e) => this.RefreshHostEntries(), new
+            {
+                ImageKey = "Refresh",
+                Text = "Refresh",
+                ToolTipText = "Reloads all entries in the 'Hosts' file.",
+            }));
+            if (ElevatedApplication.IsElevated)
+                this.actions.Add(new ToolstripButtonStateAction<HostEntry>("Common", "Save", new ActionStateEventHandler<HostEntry>((s, e) => HostsFileHelper.SaveHostEntries()), new
+                {
+                    Enabled = new Func<bool>(() => HostsFileHelper.IsDirty),
+                    ToolTipText = "Save the changes."
+                }
+                ));
+            this.actions.Add(new ToolstripButtonAction<HostEntry>("Common", "Search", SearchHostEntries, new
+            {
+                ImageKey = "Search",
+                Text = "Search"
+            }));
+
+            // Register Processors
             this.actions.RegisterProcessor<ToolstripButtonAction<HostEntry>, ToolStrip>(new Action<ToolstripButtonAction<HostEntry>, ToolStrip>((action, toolstripGroup) =>
             {
                 var tsButton = new ToolStripButton();
@@ -78,7 +182,7 @@ namespace theDiary.Tools.Development.HostFileManager
                 {
                     this.SelectedItemChanged += (s, e) =>
                     {
-                        stateAction.SetState(this.SelectedItem);
+                        //stateAction.SetState(this.SelectedItem);
                         stateAction.SetControl(tsButton, this.SelectedItem);
                     };
                 }
@@ -92,17 +196,18 @@ namespace theDiary.Tools.Development.HostFileManager
                     toolstripGroup = new ToolStrip();
                     toolstripGroup.Name = groupName;
                     toolstripGroup.Text = groupBy;
-                    toolstripGroup.ImageList = this.hostEntrySmallIcons;
+                    toolstripGroup.ImageList = toolstripGroup.ImageList.CreateImageList(typeof(Resources._16x16), new Size(16,16));
                     toolstripGroup.Left = 0;
                     toolstripGroup.Top = 0;
                     this.toolStripContainer1.TopToolStripPanel.Controls.Add(toolstripGroup);
                 }
                 return toolstripGroup;
             });
+
             this.actions.RegisterProcessor<ToolstripButtonStateAction<HostEntry>, ToolStrip>(new Action<ToolstripButtonStateAction<HostEntry>, ToolStrip>((action, toolstripGroup) =>
             {
                 var tsButton = new ToolStripButton();
-                ((IClientControlStateAction<HostEntry, ToolStripButton>)action).SetControl(tsButton);
+                ((IClientControlStateAction<HostEntry, ToolStripButton>) action).SetControl(tsButton);
                 toolstripGroup.Items.Add(tsButton);
                 IClientControlStateAction stateAction = action as IClientControlStateAction;
                 if (stateAction != null)
@@ -130,54 +235,30 @@ namespace theDiary.Tools.Development.HostFileManager
                 }
                 return toolstripGroup;
             });
-            this.Shown += (s, e) =>
-            {
-                this.actions.Process<ToolstripButtonAction<HostEntry>, ToolStrip>();
-                this.actions.Process<ToolstripButtonStateAction<HostEntry>, ToolStrip>();
-                this.actions.Process<MenuItemAction>();
-                this.actions.Process<ViewAction>();
-                this.RefreshHostEntries();
-            };
-
-            this.Text = "HelloJustinNeilon_HowAreYouDoing69Degrees".AsReadable();
         }
-
-        #region Private Declarations
-        private FormWindowState lastWindowState;
-        private ActionContainer actions = new ActionContainer();
-        private HostEntry selectedItem;
-        #endregion
-
-        #region Event Declarations
-        public event EventHandler WindowStateChanged;
-
-        public event SelectedItemChangedEventHandler<HostEntry> SelectedItemChanged;
-        #endregion
-
         #region Public Read-Only Properties
         public HostEntry SelectedItem
         {
             get
             {
-                return this.selectedItem;
-            }
-            private set
-            {
-                this.selectedItem = value;
-                this.SelectedItemChanged(this, new ItemEventArgs<HostEntry>(value));
+                return this.hostEntryList.SelectedIndices.Count == 0
+                    ? null
+                    : (HostEntry) this.hostEntryList.Items[this.hostEntryList.SelectedIndices[0]].Tag;
             }
         }
         #endregion
 
         private void editToolStripMenuItem_DropDownOpening(object sender, EventArgs e)
         {
-            foreach (ToolStripItem a in ((ToolStripMenuItem)sender).DropDownItems)
+            foreach (ToolStripItem a in ((ToolStripMenuItem) sender).DropDownItems)
             {
                 if (!(a is ToolStripMenuItem))
                     continue;
 
-                string name = ((ToolStripMenuItem)a).Tag as string;
-                ((ToolStripMenuItem)a).Checked = (bool)typeof(Configuration).GetProperty(name).GetValue(Configuration.Instance, null);
+                string name = ((ToolStripMenuItem) a).Tag as string;
+                PropertyInfo p ;
+                if (typeof(Configuration).TryGetProperty(name, out p))
+                    ((ToolStripMenuItem) a).Checked = p.GetValue(Configuration.Instance, null).As<bool>();
             }
         }
 
@@ -196,12 +277,11 @@ namespace theDiary.Tools.Development.HostFileManager
         {
         }
 
-        private void EnableDisableHostEntry(object sender, ActionEventArgs<HostEntry> e)
+        private void EnableDisableHostEntry(object sender, EventArgs e)//ActionEventArgs<HostEntry> e)
         {
-            e.State.Enabled = !e.State.Enabled;
-            this.RefreshHostEntry(e.State, this.hostEntryList.SelectedItems[0]);
-            this.SelectedItem = e.State;
-            HostsFileHelper.SetEntry(e.State);
+            this.SelectedItem.Toggle();
+            this.RefreshHostEntry(this.SelectedItem, this.hostEntryList.SelectedItems[0]);
+            HostsFileHelper.SetEntry(this.SelectedItem);
         }
 
         private void AddHostEntry(object sender, EventArgs e)
@@ -214,21 +294,21 @@ namespace theDiary.Tools.Development.HostFileManager
                     this.SetTooltip();
                     return;
                 }
-                this.RefreshHostEntries();
+                Task.Run(() => this.RefreshHostEntries());
             });
         }
 
-        private void DeleteHostEntry(object sender, ActionEventArgs<HostEntry> e)
+        private void DeleteHostEntry(object sender, EventArgs e)
         {
-            HostsFileHelper.RemoveEntry(e.State);
-            this.RefreshHostEntries();
+            HostsFileHelper.RemoveEntry(this.SelectedItem);
+            Task.Run(() => this.RefreshHostEntries());
         }
 
-        private void EditHostEntry(object sender, ActionEventArgs<HostEntry> e)
+        private void EditHostEntry(object sender, EventArgs e)//ActionEventArgs<HostEntry> e)
         {
-            this.EditHostEntry(e.State);
-            this.RefreshHostEntry(e.State, this.hostEntryList.SelectedItems[0]);
-            this.SelectedItem = e.State;
+            //e.State = this.SelectedItem;
+            this.EditHostEntry(this.SelectedItem);
+            this.RefreshHostEntry(this.SelectedItem, this.hostEntryList.SelectedItems[0]);
         }
 
         private void Instance_PropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -241,7 +321,7 @@ namespace theDiary.Tools.Development.HostFileManager
                 case "CurrentItemsView":
                     this.hostEntryList.BeginUpdate();
                     this.hostEntryList.LargeImageList = (Configuration.Instance.CurrentItemsView == ListItemsView.LargeIcon) ? this.hostEntryLargeIcons : this.hostEntryMediumIcons;
-                    System.Windows.Forms.View view = (Configuration.Instance.CurrentItemsView == ListItemsView.MediumIcon) ? System.Windows.Forms.View.LargeIcon : (System.Windows.Forms.View)(int)Configuration.Instance.CurrentItemsView;
+                    System.Windows.Forms.View view = (Configuration.Instance.CurrentItemsView == ListItemsView.MediumIcon) ? System.Windows.Forms.View.LargeIcon : (System.Windows.Forms.View) (int) Configuration.Instance.CurrentItemsView;
                     this.hostEntryList.View = view;
                     this.hostEntryList.AutoResizeColumn(0, ColumnHeaderAutoResizeStyle.ColumnContent);
                     this.hostEntryList.AutoResizeColumn(1, ColumnHeaderAutoResizeStyle.ColumnContent);
@@ -287,18 +367,18 @@ namespace theDiary.Tools.Development.HostFileManager
             }
 
             this.Cursor = Cursors.WaitCursor;
-            this.SetCurrentStatus("Refreshing Applications...");
+            this.SetCurrentStatus("Refreshing...");
 
             this.hostEntryList.BeginUpdate();
             this.hostEntryList.Items.Clear();
-
-            foreach (var entry in HostsFileHelper.GetHostEntries())
+            var entries = HostsFileHelper.GetHostEntries();
+            foreach (var entry in entries)
             {
-                var item = new ListViewItem((string[])entry);
-                item.Tag = entry;
-                this.RefreshHostEntry(entry, item);
+                ListViewItem item = this.RefreshHostEntry(entry);
                 this.hostEntryList.Items.Add(item);
             }
+            this.entryCount.Text = string.Format("{0} Entries", entries.Count());
+            this.disabledEntryCount.Text = string.Format("{0} Entries", entries.Where(entry => !entry.Enabled).Count());
             this.hostEntryList.AutoResizeColumn(0, ColumnHeaderAutoResizeStyle.ColumnContent);
             this.hostEntryList.AutoResizeColumn(1, ColumnHeaderAutoResizeStyle.ColumnContent);
             this.hostEntryList.AutoResizeColumn(2, ColumnHeaderAutoResizeStyle.ColumnContent);
@@ -306,10 +386,13 @@ namespace theDiary.Tools.Development.HostFileManager
             this.hostEntryList.EndUpdate();
             this.SetCurrentStatus();
             this.Cursor = Cursors.Default;
+
         }
 
-        private void RefreshHostEntry(HostEntry hostEntry, ListViewItem item)
+        private ListViewItem RefreshHostEntry(HostEntry hostEntry, ListViewItem item = null)
         {
+            if (item == null)
+                item = new ListViewItem();
             if (item.SubItems.Count < 4)
                 while (item.SubItems.Count < 4)
                     item.SubItems.Add(new ListViewItem.ListViewSubItem());
@@ -319,6 +402,8 @@ namespace theDiary.Tools.Development.HostFileManager
             item.SubItems[3].Text = hostEntry.Description;
             item.Tag = hostEntry;
             item.ImageIndex = hostEntry.Enabled ? 1 : 0;
+
+            return item;
         }
 
         private void SetCurrentStatus(string currentStatusFormat, params object[] args)
@@ -371,6 +456,7 @@ namespace theDiary.Tools.Development.HostFileManager
                     this.SetTooltip();
                     return;
                 }
+                Task.Run(() => this.RefreshHostEntries());
             });
         }
 
@@ -392,22 +478,20 @@ namespace theDiary.Tools.Development.HostFileManager
         }
         private void SelectedHostEntryChanged(object sender, EventArgs e)
         {
-            this.SelectedItem = this.hostEntryList.SelectedIndices.Count == 0 ? null : (HostEntry)this.hostEntryList.Items[this.hostEntryList.SelectedIndices[0]].Tag;
+            HostEntry item = this.hostEntryList.SelectedIndices.Count == 0 ? null : (HostEntry) this.hostEntryList.Items[this.hostEntryList.SelectedIndices[0]].Tag;
+            if (this.SelectedItemChanged != null)
+                this.SelectedItemChanged(this, new ItemEventArgs<HostEntry>(item));
         }
-
-
-
-
 
         private void ListItemsViewChanged(object sender, EventArgs e)
         {
-            ListItemsView view = (ListItemsView)Enum.Parse(typeof(ListItemsView), (string)((ToolStripMenuItem)sender).Tag);
+            ListItemsView view = (ListItemsView) Enum.Parse(typeof(ListItemsView), (string) ((ToolStripMenuItem) sender).Tag);
             typeof(Configuration).GetProperty("CurrentItemsView").SetValue(Configuration.Instance, view, null);
         }
         private void SetConfigurationChanged(object sender, EventArgs e)
         {
-            string configurationName = ((ToolStripMenuItem)sender).Tag as string;
-            typeof(Configuration).GetProperty(configurationName).SetValue(Configuration.Instance, ((ToolStripMenuItem)sender).Checked, null);
+            string configurationName = ((ToolStripMenuItem) sender).Tag as string;
+            typeof(Configuration).GetProperty(configurationName).SetValue(Configuration.Instance, ((ToolStripMenuItem) sender).Checked, null);
         }
         private void toolStripContextMenu_Opening(object sender, CancelEventArgs e)
         {
@@ -416,7 +500,7 @@ namespace theDiary.Tools.Development.HostFileManager
 
         private void ToolstripViewChanged(object sender, EventArgs e)
         {
-            ToolstripView view = (ToolstripView)Enum.Parse(typeof(ToolstripView), (string)((ToolStripMenuItem)sender).Tag);
+            ToolstripView view = (ToolstripView) Enum.Parse(typeof(ToolstripView), (string) ((ToolStripMenuItem) sender).Tag);
             typeof(Configuration).GetProperty("CurrentToolstripView").SetValue(Configuration.Instance, view, null);
         }
 
@@ -430,9 +514,9 @@ namespace theDiary.Tools.Development.HostFileManager
                 item.Click += (s, e2) =>
                 {
                     this.hostEntryList.Groups.Clear();
-                    foreach(var he in this.hostEntryList.Items.Cast<ListViewItem>())
+                    foreach (var he in this.hostEntryList.Items.Cast<ListViewItem>())
                     {
-//                        (he.Tag as HostEntry).
+                        //                        (he.Tag as HostEntry).
                     }
                     var groupBy = new ListViewGroup(a.Text, HorizontalAlignment.Left);
                     //this.hostEntryList.Groups.Add();

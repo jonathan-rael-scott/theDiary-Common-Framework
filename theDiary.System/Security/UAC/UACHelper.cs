@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 using Microsoft.Win32;
 
 namespace System.Security.UAC
-{    public static class UACHelper
+{
+    public static class UACHelper
     {
         private const string UACRegistryKey = "Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\System";
         private const string UACRegistryValue = "EnableLUA";
@@ -31,7 +32,7 @@ namespace System.Security.UAC
         private static extern bool GetTokenInformation(IntPtr tokenHandle, TokenInformationClasses tokenInformationClass, IntPtr tokenInformation, uint tokenInformationLength, out uint ReturnLength);
         #endregion
 
-        public static bool IsUacEnabled
+        public static bool IsUACEnabled
         {
             get
             {
@@ -47,7 +48,7 @@ namespace System.Security.UAC
         {
             get
             {
-                if (UACHelper.IsUacEnabled)
+                if (UACHelper.IsUACEnabled)
                 {
                     IntPtr tokenHandle = IntPtr.Zero;
                     if (!UACHelper.OpenProcessToken(Process.GetCurrentProcess().Handle, TOKEN_READ, out tokenHandle))
@@ -59,18 +60,18 @@ namespace System.Security.UAC
                     {
                         TokenElevationType elevationResult = TokenElevationType.TokenElevationTypeDefault;
 
-                        int elevationResultSize = Marshal.SizeOf((int)elevationResult);
+                        int elevationResultSize = Marshal.SizeOf((int) elevationResult);
                         uint returnedSize = 0;
 
                         IntPtr elevationTypePtr = Marshal.AllocHGlobal(elevationResultSize);
                         try
                         {
                             bool success = UACHelper.GetTokenInformation(tokenHandle, TokenInformationClasses.TokenElevationType,
-                                                               elevationTypePtr, (uint)elevationResultSize,
+                                                               elevationTypePtr, (uint) elevationResultSize,
                                                                out returnedSize);
                             if (success)
                             {
-                                elevationResult = (TokenElevationType)Marshal.ReadInt32(elevationTypePtr);
+                                elevationResult = (TokenElevationType) Marshal.ReadInt32(elevationTypePtr);
                                 bool isProcessAdmin = elevationResult == TokenElevationType.TokenElevationTypeFull;
                                 return isProcessAdmin;
                             }
@@ -124,10 +125,10 @@ namespace System.Security.UAC
                 IntPtr elevationTypePtr = Marshal.AllocHGlobal(elevationResultSize);
                 try
                 {
-                    bool success = UACHelper.GetTokenInformation(tokenHandle, TokenInformationClasses.TokenElevationType, elevationTypePtr, (uint)elevationResultSize, out returnedSize);
+                    bool success = UACHelper.GetTokenInformation(tokenHandle, TokenInformationClasses.TokenElevationType, elevationTypePtr, (uint) elevationResultSize, out returnedSize);
                     if (!success)
                         throw new ApplicationException("Unable to determine the current elevation.");
-                    
+
                     elevationResult = (TokenElevationType) Marshal.ReadInt32(elevationTypePtr);
                     bool isProcessAdmin = elevationResult == TokenElevationType.TokenElevationTypeFull;
                     return isProcessAdmin;

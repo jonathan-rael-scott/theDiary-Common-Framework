@@ -8,6 +8,11 @@ namespace System
 {
     public static partial class SystemExtensions
     {
+        /// <summary>
+        /// Determines the week number for the <paramref name="date"/>.
+        /// </summary>
+        /// <param name="date">The <see cref="DateTime"/> value.</param>
+        /// <returns>The week number of the <paramref name="date"/> value.</returns>
         public static int WeekOfYear(this DateTime date)
         {
             var day = (int)CultureInfo.CurrentCulture.Calendar.GetDayOfWeek(date);

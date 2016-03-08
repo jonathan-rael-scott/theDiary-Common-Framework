@@ -24,8 +24,4 @@ namespace System.Security
 
         bool Verified { get; }
     }
-
-    
-
-    
 }

@@ -77,6 +77,18 @@ namespace System
 
         #region Public Methods
 
+        /// <summary>
+        /// Indicates whether this instance and a specified object are equal.
+        /// </summary>
+        /// <returns>
+        /// true if <paramref name="obj"/> and this instance are the same type and represent the same value; otherwise, false. 
+        /// </returns>
+        /// <param name="obj">The object to compare with the current instance. </param>
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
+        }
+
         public static Percentage Calculate(long currentValue, long maximumValue)
         {
             return new Percentage()

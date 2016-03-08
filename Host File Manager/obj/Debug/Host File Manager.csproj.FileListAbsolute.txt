@@ -13,3 +13,23 @@ C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\co
 C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\obj\Debug\Seth.Tools.Development.HostFileManager.Controls.SearchControl.resources
 C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\bin\Debug\Seth.System.dll
 C:\Development\DotNot\Projects\Iterative\Framework\Seth Consultiing Framework\common-development-framework\Host File Manager\bin\Debug\Seth.System.pdb
+C:\Development\DotNot\Projects\theDiary Software\Framework\Host File Manager\bin\Debug\Host File Manager.exe.config
+C:\Development\DotNot\Projects\theDiary Software\Framework\Host File Manager\obj\Debug\Host File Manager.exe
+C:\Development\DotNot\Projects\theDiary Software\Framework\Host File Manager\obj\Debug\Host File Manager.pdb
+C:\Development\DotNot\Projects\theDiary Software\Framework\Host File Manager\obj\Debug\Host File Manager.csprojResolveAssemblyReference.cache
+C:\Development\DotNot\Projects\theDiary Software\Framework\Host File Manager\obj\Debug\theDiary.Tools.Development.HostFileManager.Controls.HostEntryControl.resources
+C:\Development\DotNot\Projects\theDiary Software\Framework\Host File Manager\obj\Debug\theDiary.Tools.Development.HostFileManager.Controls.IPAddressControl.resources
+C:\Development\DotNot\Projects\theDiary Software\Framework\Host File Manager\obj\Debug\theDiary.Tools.Development.HostFileManager.Controls.SearchControl.resources
+C:\Development\DotNot\Projects\theDiary Software\Framework\Host File Manager\obj\Debug\theDiary.Tools.Development.HostFileManager.DialogForm.resources
+C:\Development\DotNot\Projects\theDiary Software\Framework\Host File Manager\obj\Debug\theDiary.Tools.Development.HostFileManager.MainForm.resources
+C:\Development\DotNot\Projects\theDiary Software\Framework\Host File Manager\obj\Debug\Host File Manager.csproj.GenerateResource.Cache
+C:\Development\DotNot\Projects\theDiary Software\Framework\Host File Manager\bin\Debug\Host File Manager.exe
+C:\Development\DotNot\Projects\theDiary Software\Framework\Host File Manager\bin\Debug\Host File Manager.pdb
+C:\Development\DotNot\Projects\theDiary Software\Framework\Host File Manager\bin\Debug\theDiary.System.dll
+C:\Development\DotNot\Projects\theDiary Software\Framework\Host File Manager\bin\Debug\theDiary.System.pdb
+C:\Development\DotNot\Projects\theDiary Software\Framework\Host File Manager\obj\Debug\theDiary.Tools.Development.HostFileManager.Controls.OptionsControl.resources
+C:\Development\DotNot\Projects\theDiary Software\Framework\Host File Manager\obj\Debug\theDiary.Tools.Development.HostFileManager.Properties.Resources.resources
+C:\Development\DotNot\Projects\theDiary Software\Framework\Host File Manager\obj\Debug\theDiary.Tools.Development.HostFileManager.Resources.16x16.resources
+C:\Development\DotNot\Projects\theDiary Software\Framework\Host File Manager\obj\Debug\theDiary.Tools.Development.HostFileManager.Resources.32x32.resources
+C:\Development\DotNot\Projects\theDiary Software\Framework\Host File Manager\obj\Debug\theDiary.Tools.Development.HostFileManager.Resources.48x48.resources
+C:\Development\DotNot\Projects\theDiary Software\Framework\Host File Manager\obj\Debug\theDiary.Tools.Development.HostFileManager.Resources.64x64.resources

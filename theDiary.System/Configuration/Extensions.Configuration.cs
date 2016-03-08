@@ -100,7 +100,7 @@ namespace System.Configuration
         /// <typeparam name="TKey">The <see cref="Type"/> of the <paramref name="key"/> value.</typeparam>
         /// <param name="element"></param>
         /// <returns>The value of the key.</returns>
-        /// <exception cref="ArgumentNulLException">thrown if the <paramref name="element"/> is <c>Null</c>.</exception>
+        /// <exception cref="ArgumentNullException">thrown if the <paramref name="element"/> is <c>Null</c>.</exception>
         /// <exception cref="InvalidOperationException">thrown if the <paramref name="element"/> does not contain a key property.</exception>
         public static TKey GetKey<T, TKey>(this T element)
             where T : ConfigurationElement

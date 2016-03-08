@@ -7,7 +7,7 @@
     <ProjectGuid>{17D781FD-7F84-4E9C-A554-CB59FFDF1B94}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Seth.Tools.Development.HostFileManager</RootNamespace>
+    <RootNamespace>theDiary.Tools.Development.HostFileManager</RootNamespace>
     <AssemblyName>Host File Manager</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -30,6 +30,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Application.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -57,7 +60,10 @@
     <Compile Include="Classes\ConfigurationHelper.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Classes\HostEntry.cs" />
+    <Compile Include="Classes\Entries\HostComment.cs" />
+    <Compile Include="Classes\Entries\HostEntry.cs" />
+    <Compile Include="Classes\Entries\IEntry.cs" />
+    <Compile Include="Classes\Extensions.cs" />
     <Compile Include="Classes\HostsFileHelper.cs" />
     <Compile Include="Classes\IDialogFormControl.cs" />
     <Compile Include="Classes\IDialogFormIcon.cs" />
@@ -73,6 +79,12 @@
     </Compile>
     <Compile Include="Controls\IPAddressControl.Designer.cs">
       <DependentUpon>IPAddressControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OptionsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\OptionsControl.Designer.cs">
+      <DependentUpon>OptionsControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\SearchControl.cs">
       <SubType>UserControl</SubType>
@@ -95,12 +107,35 @@
     <Compile Include="ListItemsView.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\16x16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>16x16.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\32x32.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>32x32.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\48x48.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>48x48.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\64x64.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>64x64.resx</DependentUpon>
+    </Compile>
     <Compile Include="ToolstripView.cs" />
     <EmbeddedResource Include="Controls\HostEntryControl.resx">
       <DependentUpon>HostEntryControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\IPAddressControl.resx">
       <DependentUpon>IPAddressControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\OptionsControl.resx">
+      <DependentUpon>OptionsControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\SearchControl.resx">
       <DependentUpon>SearchControl.cs</DependentUpon>
@@ -121,6 +156,22 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resources\16x16.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>16x16.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\32x32.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>32x32.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\48x48.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>48x48.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\64x64.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>64x64.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -135,41 +186,53 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Large\Add_Large.png" />
-    <Content Include="Resources\Large\Delete_Large.png" />
-    <Content Include="Resources\Large\Disabled_Large.png" />
-    <Content Include="Resources\Large\Disable_Large.png" />
-    <Content Include="Resources\Large\Edit_Large.png" />
-    <Content Include="Resources\Large\Enabled_Large.png" />
-    <Content Include="Resources\Large\Enable_Large.png" />
-    <Content Include="Resources\Large\Find_Large.png" />
-    <Content Include="Resources\Large\Refresh_Large.png" />
-    <Content Include="Resources\Large\Save_Large.png" />
-    <Content Include="Resources\Medium\Add_Medium.png" />
-    <Content Include="Resources\Medium\Delete_Medium.png" />
-    <Content Include="Resources\Medium\Disabled_Medium.png" />
-    <Content Include="Resources\Medium\Disable_Medium.png" />
-    <Content Include="Resources\Medium\Edit_Medium.png" />
-    <Content Include="Resources\Medium\Enabled_Medium.png" />
-    <Content Include="Resources\Medium\Enable_Medium.png" />
-    <Content Include="Resources\Medium\Find_Medium.png" />
-    <Content Include="Resources\Medium\Refresh_Medium.png" />
-    <Content Include="Resources\Medium\Save_Medium.png" />
-    <Content Include="Resources\Small\Add_Small.png" />
-    <Content Include="Resources\Small\Delete_Small.png" />
-    <Content Include="Resources\Small\Disabled_Small.png" />
-    <Content Include="Resources\Small\Disable_Small.png" />
-    <Content Include="Resources\Small\Edit_Small.png" />
-    <Content Include="Resources\Small\Enabled_Small.png" />
-    <Content Include="Resources\Small\Enable_Small.png" />
-    <Content Include="Resources\Small\Find_Small.png" />
-    <Content Include="Resources\Small\Refresh_Small.png" />
-    <Content Include="Resources\Small\Save_Small.png" />
+    <Content Include="Application.ico" />
+    <Content Include="Resources\16\Configure.png" />
+    <Content Include="Resources\16\DeleteHost.png" />
+    <Content Include="Resources\16\DisableHost.png" />
+    <Content Include="Resources\16\EditHost.png" />
+    <Content Include="Resources\16\EnableHost.png" />
+    <Content Include="Resources\16\LocalServer.png" />
+    <Content Include="Resources\16\NewHost.png" />
+    <Content Include="Resources\16\Refresh.png" />
+    <Content Include="Resources\16\RemoteServer.png" />
+    <Content Include="Resources\16\Save.png" />
+    <Content Include="Resources\32\Configure.png" />
+    <Content Include="Resources\32\DeleteHost.png" />
+    <Content Include="Resources\32\DisableHost.png" />
+    <Content Include="Resources\32\EditHost.png" />
+    <Content Include="Resources\32\EnableHost.png" />
+    <Content Include="Resources\32\LocalServer.png" />
+    <Content Include="Resources\32\NewHost.png" />
+    <Content Include="Resources\32\Refresh.png" />
+    <Content Include="Resources\32\RemoteServer.png" />
+    <Content Include="Resources\32\Save.png" />
+    <Content Include="Resources\48\Configure.png" />
+    <Content Include="Resources\48\DeleteHost.png" />
+    <Content Include="Resources\48\DisableHost.png" />
+    <Content Include="Resources\48\EditHost.png" />
+    <Content Include="Resources\48\EnableHost.png" />
+    <Content Include="Resources\48\LocalServer.png" />
+    <Content Include="Resources\48\NewHost.png" />
+    <Content Include="Resources\48\Refresh.png" />
+    <Content Include="Resources\48\RemoteServer.png" />
+    <Content Include="Resources\48\Save.png" />
+    <Content Include="Resources\64\Configure.png" />
+    <Content Include="Resources\64\DeleteHost.png" />
+    <Content Include="Resources\64\DisableHost.png" />
+    <Content Include="Resources\64\EditHost.png" />
+    <Content Include="Resources\64\EnableHost.png" />
+    <Content Include="Resources\64\LocalServer.png" />
+    <Content Include="Resources\64\NewHost.png" />
+    <Content Include="Resources\64\Refresh.png" />
+    <Content Include="Resources\64\RemoteServer.png" />
+    <Content Include="Resources\64\Save.png" />
+    <Content Include="Resources\Application.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\theDiary.System\theDiary.System.csproj">
       <Project>{969581e6-8d34-465f-b31a-b457d46a80ad}</Project>
-      <Name>Seth.System</Name>
+      <Name>theDiary.System</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

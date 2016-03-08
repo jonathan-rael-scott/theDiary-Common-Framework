@@ -7,15 +7,27 @@ using System.Threading.Tasks;
 
 namespace System.Configuration
 {
+    /// <summary>
+    /// Represents a configuration element containing a collection of <see cref="ConfigurationKeyValueElement{TKey, TValue}"/> instances.
+    /// </summary>
+    /// <typeparam name="TKey">The <see cref="Type"/> used as the key for the configuration elements.</typeparam>
+    /// <typeparam name="TValue">The <see cref="Type"/> used for the value contained by the configuration elements.</typeparam>
     public class ConfigurationKeyValueElementCollection<TKey, TValue>
         : ConfigurationElementCollection<ConfigurationKeyValueElement<TKey, TValue>>
     {
         #region Consturctors
+        /// <summary>
+        /// Initializes a new instance of a <see cref="ConfigurationKeyValueElementCollection{TKey, TValue}"/> class.
+        /// </summary>
         public ConfigurationKeyValueElementCollection()
             : base()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of a <see cref="ConfigurationKeyValueElementCollection{TKey, TValue}"/> class.
+        /// </summary>
+        /// <param name="comparer">The <see cref="IComparer"/> to use.</param>
         public ConfigurationKeyValueElementCollection(IComparer comparer)
             : base(comparer)
         {
@@ -23,6 +35,11 @@ namespace System.Configuration
         #endregion
 
         #region Public Property
+        /// <summary>
+        /// Gets or sets the value of a configuration element contained in the <see cref="ConfigurationKeyValueElementCollection{TKey, TValue}"/>.
+        /// </summary>
+        /// <param name="key">The value used to identify the configuration element.</param>
+        /// <returns>The value of the configuration element.</returns>
         public TValue this[TKey key]
         {
             get
@@ -48,9 +65,9 @@ namespace System.Configuration
 
         #region Protected Methods & Functions
         /// <summary>
-        /// Creates a new <see cref="AuthenticationParameterConfigurationElemement"/>.
+        /// Creates a new <see cref="ConfigurationKeyValueElementCollection{TKey, TValue}"/> instance.
         /// </summary>
-        /// <returns>An instance of <see cref="AuthenticationParameterConfigurationElemement"/>.</returns>
+        /// <returns>An instance of <see cref="ConfigurationKeyValueElementCollection{TKey, TValue}"/>.</returns>
         protected override ConfigurationElement CreateNewElement()
         {
             return new ConfigurationKeyValueElement<TKey, TValue>();

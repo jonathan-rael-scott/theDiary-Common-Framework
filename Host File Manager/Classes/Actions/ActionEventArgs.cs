@@ -32,6 +32,6 @@ namespace theDiary.Tools.Development.HostFileManager
             this.State = state;
         }
 
-        public T State { get; private set; }
+        public T State { get;  set; }
     }
 }

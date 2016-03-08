@@ -9,7 +9,7 @@ namespace theDiary.Tools.Development.HostFileManager
 {
     internal static class ConfigurationHelper
     {
-        private static readonly string RootRegistryKey = "Software\\Iterative\\HostFileManager";                
+        private static readonly string RootRegistryKey = "Software\\theDiary\\HostsFileManager";                
 
         internal static bool ReadConfiguration(string configurationName)
         {
